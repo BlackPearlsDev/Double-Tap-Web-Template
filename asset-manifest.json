@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/Double-Tap-Web-Template/static/css/main.e2877dcb.css",
-    "main.js": "/Double-Tap-Web-Template/static/js/main.f89b0434.js",
+    "main.css": "/Double-Tap-Web-Template/static/css/main.bbce7e14.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.ed865077.js",
     "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.9a170870d5f1c22239c3.jpg",
     "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
     "static/media/news-4.jpg": "/Double-Tap-Web-Template/static/media/news-4.18601e0e52d24c5192ba.jpg",
     "static/media/news-2.jpg": "/Double-Tap-Web-Template/static/media/news-2.acdd3f28e666ecb60307.jpg",
     "static/media/news-1.jpg": "/Double-Tap-Web-Template/static/media/news-1.40d4a206d7e403c2811b.jpg",
+    "static/media/maintenance.jpg": "/Double-Tap-Web-Template/static/media/maintenance.7020c47cd2108a34c2bc.jpg",
     "static/media/dark-sword.png": "/Double-Tap-Web-Template/static/media/dark-sword.87071beb44f598f38920.png",
     "static/media/icon_zaap.png": "/Double-Tap-Web-Template/static/media/icon_zaap.4ec9004b2343365f220b.png",
     "static/media/dofus_emeraude.png": "/Double-Tap-Web-Template/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
     "static/media/icon_amalia.png": "/Double-Tap-Web-Template/static/media/icon_amalia.db4ce645c8422fac32ae.png",
     "index.html": "/Double-Tap-Web-Template/index.html",
-    "main.e2877dcb.css.map": "/Double-Tap-Web-Template/static/css/main.e2877dcb.css.map",
-    "main.f89b0434.js.map": "/Double-Tap-Web-Template/static/js/main.f89b0434.js.map"
+    "main.bbce7e14.css.map": "/Double-Tap-Web-Template/static/css/main.bbce7e14.css.map",
+    "main.ed865077.js.map": "/Double-Tap-Web-Template/static/js/main.ed865077.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2877dcb.css",
-    "static/js/main.f89b0434.js"
+    "static/css/main.bbce7e14.css",
+    "static/js/main.ed865077.js"
   ]
 }
