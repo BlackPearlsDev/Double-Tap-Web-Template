@@ -29,11 +29,11 @@ function Header() {
                 {widthScreen > 767 ? (
                     <>
                     <img src={DofusIcon} alt="Le logo de Dofus, MMORPG français créer par Ankama" />
-                    <Navbar.Brand href="/">DOUBLE TAP</Navbar.Brand>
+                    <Navbar.Brand as={NavLink} href="/">DOUBLE TAP</Navbar.Brand>
 
                     <Nav pullRight>
                         <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
-                        <Nav.Item as={NavLink} href="/">Nouveautés</Nav.Item>
+                        <Nav.Item as={NavLink} href="/news">Nouveautés</Nav.Item>
                         <Nav.Item as={NavLink} href="/">Classement</Nav.Item>
                         <Nav.Menu title="Autres">
                             <Nav.Item as={NavLink} href="/">Support</Nav.Item>
@@ -53,7 +53,7 @@ function Header() {
 
                                 <Nav pullRight>
                                     <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
-                                    <Nav.Item as={NavLink} href="/">Nouveautés</Nav.Item>
+                                    <Nav.Item as={NavLink} href="/news">Nouveautés</Nav.Item>
                                     <Nav.Item as={NavLink} href="/">Classement</Nav.Item>
                                     <Nav.Menu title="Autres">
                                         <Nav.Item as={NavLink} href="/">Support</Nav.Item>
