@@ -15,9 +15,8 @@ function Router() {
             <Route index path="/" element={<Home />} />
             <Route path="/play" element={<Play />} />
             <Route path="/news" element={<News />} />
-
-
             <Route path="/developper" element={<Developper />} />
+            <Route path="/Double-Tap-Web-Template" element={<Home />} /> {/* For GitHub Pages */}
             <Route path="*" element={<NotFound />}/>
         </Routes>
     );
