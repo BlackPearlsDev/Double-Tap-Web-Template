@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc8d0ff0.css",
-    "main.js": "/static/js/main.1793e841.js",
-    "static/media/img_top_home.png": "/static/media/img_top_home.a90dfb2ec218e25160bd.png",
-    "static/media/icon_zaap.png": "/static/media/icon_zaap.4ec9004b2343365f220b.png",
-    "static/media/dofus_emeraude.png": "/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
-    "static/media/icon_amalia.png": "/static/media/icon_amalia.db4ce645c8422fac32ae.png",
-    "index.html": "/index.html",
-    "main.cc8d0ff0.css.map": "/static/css/main.cc8d0ff0.css.map",
-    "main.1793e841.js.map": "/static/js/main.1793e841.js.map"
+    "main.css": "/Double-Tap-Web-Template/static/css/main.cc8d0ff0.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.9637fc6d.js",
+    "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
+    "static/media/icon_zaap.png": "/Double-Tap-Web-Template/static/media/icon_zaap.4ec9004b2343365f220b.png",
+    "static/media/dofus_emeraude.png": "/Double-Tap-Web-Template/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
+    "static/media/icon_amalia.png": "/Double-Tap-Web-Template/static/media/icon_amalia.db4ce645c8422fac32ae.png",
+    "index.html": "/Double-Tap-Web-Template/index.html",
+    "main.cc8d0ff0.css.map": "/Double-Tap-Web-Template/static/css/main.cc8d0ff0.css.map",
+    "main.9637fc6d.js.map": "/Double-Tap-Web-Template/static/js/main.9637fc6d.js.map"
   },
   "entrypoints": [
     "static/css/main.cc8d0ff0.css",
-    "static/js/main.1793e841.js"
+    "static/js/main.9637fc6d.js"
   ]
 }
