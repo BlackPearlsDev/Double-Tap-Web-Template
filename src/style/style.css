@@ -279,7 +279,7 @@ nav img {
     text-align: center;
 }
 
-.play-deco {
+.play-deco, .ladder-deco {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,7 +288,7 @@ nav img {
     margin: 20px auto;
 }
 
-.play-deco .image-bg {
+.play-deco .image-bg, .ladder-deco .image-bg {
     top: 90%;
     left: 50%;
 }
@@ -465,6 +465,33 @@ nav img {
 }
 
 /* FIN PAGE NEWS */
+
+/* PAGE LADDER */
+
+.ladder-container {
+    width: 50%;
+    margin: 5% auto;
+}
+
+.ladder-container div {
+    border-radius: 10px;
+}
+
+/* table title column */
+.rs-table-cell-content {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.rs-table-body-row-wrapper {
+    background-color: #1a1d24;
+}
+
+.txt-admin {
+    color: rgba(255, 255, 0, .8);
+}
+
+/* FIN PAGE LADDER */
 
 /* Firefox */
 * {

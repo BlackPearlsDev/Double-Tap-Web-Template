@@ -39,7 +39,7 @@ function Header() {
                     <Nav pullRight>
                         <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
                         <Nav.Item as={NavLink} href="/news">Nouveautés</Nav.Item>
-                        <Nav.Item as={NavLink} href="/">Classement</Nav.Item>
+                        <Nav.Item as={NavLink} href="/ladder">Classement</Nav.Item>
                         <Nav.Menu title="Autres">
                             <Nav.Item as={NavLink} href="/">Support</Nav.Item>
                             <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
@@ -60,7 +60,7 @@ function Header() {
                                         <Nav.Item as={NavLink} href="/news">Nouveautés</Nav.Item>
                                     </div>
                                     <div>
-                                        <Nav.Item as={NavLink} href="/">Classement</Nav.Item>
+                                        <Nav.Item as={NavLink} href="/ladder">Classement</Nav.Item>
                                         <Nav.Menu title="Autres">
                                             <Nav.Item as={NavLink} href="/">Support</Nav.Item>
                                             <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
