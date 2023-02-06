@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/Double-Tap-Web-Template/static/css/main.cc8d0ff0.css",
-    "main.js": "/Double-Tap-Web-Template/static/js/main.9637fc6d.js",
+    "main.css": "/Double-Tap-Web-Template/static/css/main.4bec9700.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.555a35e6.js",
     "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
+    "static/media/dark-sword.png": "/Double-Tap-Web-Template/static/media/dark-sword.87071beb44f598f38920.png",
     "static/media/icon_zaap.png": "/Double-Tap-Web-Template/static/media/icon_zaap.4ec9004b2343365f220b.png",
     "static/media/dofus_emeraude.png": "/Double-Tap-Web-Template/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
     "static/media/icon_amalia.png": "/Double-Tap-Web-Template/static/media/icon_amalia.db4ce645c8422fac32ae.png",
     "index.html": "/Double-Tap-Web-Template/index.html",
-    "main.cc8d0ff0.css.map": "/Double-Tap-Web-Template/static/css/main.cc8d0ff0.css.map",
-    "main.9637fc6d.js.map": "/Double-Tap-Web-Template/static/js/main.9637fc6d.js.map"
+    "main.4bec9700.css.map": "/Double-Tap-Web-Template/static/css/main.4bec9700.css.map",
+    "main.555a35e6.js.map": "/Double-Tap-Web-Template/static/js/main.555a35e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc8d0ff0.css",
-    "static/js/main.9637fc6d.js"
+    "static/css/main.4bec9700.css",
+    "static/js/main.555a35e6.js"
   ]
 }
