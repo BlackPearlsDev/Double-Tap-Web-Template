@@ -493,6 +493,56 @@ nav img {
 
 /* FIN PAGE LADDER */
 
+/* PAGE SERVER DOWN */
+.section-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.section-error h1 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.section-error p {
+    font-size: 2rem;
+    color: rgba(235, 235, 245, .6);
+    margin-bottom: 20px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.section-error img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, .7);
+}
+
+.section-error button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1a1d24;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: all .4s ease-in-out;
+}
+
+.section-error button:hover {
+    color: rgba(235, 235, 245, .6);
+    background-color: #1a1d24;
+    transform: scale(1.02);
+    transition: all .4s ease-in-out;
+}
+
+/* FIN PAGE SERVER DOWN */
+
 /* Firefox */
 * {
     scrollbar-width: auto;
@@ -663,6 +713,24 @@ footer {
     }
 
     /* FIN PAGE ERROR 404 */
+
+    /* PAGE SERVER DOWN */
+    .section-error h1 {
+        margin: 5%;
+        text-align: center;
+    }
+
+    .section-error p {
+        font-size: 3rem;
+        margin: 5%;
+    }
+
+    .section-error img {
+        margin: 5%;
+        width: 90%;
+    }
+
+    /* FIN PAGE SERVER DOWN */
 }
 
 /* dimensions special entre telephone large et tablette */
@@ -698,6 +766,15 @@ footer {
     .card-news-img {
         height: 280px;
     }
+}
+
+/* dimension special pour le 768px qui fais chier des fois */
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    
+    .ladder-deco .image-bg {
+        top: 43%;
+    }
+
 }
 
 /* dimensions entre tablette et laptop */
@@ -771,6 +848,15 @@ footer {
     }
 
     /* FIN PAGE ERROR 404 */
+
+        /* PAGE SERVER DOWN */
+    
+        .section-error img {
+            margin: 5%;
+            width: 90%;
+        }
+    
+        /* FIN PAGE SERVER DOWN */
 }
 
 /* laptop et ecran moyen */

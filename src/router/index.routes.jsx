@@ -8,6 +8,7 @@ import News from "../Components/Pages/News/Index";
 import Ladder from "../Components/Pages/Ladder/Index";
 import Team from "../Components/Pages/Team/Index";
 import NotFound from "../Components/Pages/NotFound/Index";
+import Error from "../Components/Error";
 
 function Router() {
     return (
@@ -18,6 +19,7 @@ function Router() {
             <Route path="/team" element={<Team />} />
             <Route path="/ladder" element={<HOC child={Ladder} />} />
             <Route path="/Double-Tap-Web-Template" element={<Home />} /> {/* For GitHub Pages */}
+            <Route path="/error" element={<Error />} />
             <Route path="*" element={<NotFound />}/>
             {/* <HOC child={} isAuthRequired={true} */}
         </Routes>

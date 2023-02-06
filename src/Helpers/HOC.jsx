@@ -59,7 +59,7 @@ function HOC({ child, isAuthRequired, isAdminRequired }) {
         if (!listUsers.length) {
             async function fetchData() {
                 const res = await getAll();
-                if (res.code) {
+                if (res.status !== 200) {
                     setFetchError(true);
                     return;
                 }
@@ -71,16 +71,17 @@ function HOC({ child, isAuthRequired, isAdminRequired }) {
     }, []);
 
     useEffect(() => {
-        async function fetchData() {
-            const res = await getAllLadder();
-            // console.log("res:", res);
-            if (res.code) {
-                setFetchError(true);
-                return;
+        if (!listLadder.length) {
+            async function fetchData() {
+                const res = await getAllLadder();
+                if (res.status !== 200) {
+                    setFetchError(true);
+                    return;
+                }
+                dispatch(loadLadder(res.data));
             }
-            dispatch(loadLadder(res.data));
+            fetchData();
         }
-        fetchData();
         // eslint-disable-next-line
     }, []);
 
@@ -95,7 +96,7 @@ function HOC({ child, isAuthRequired, isAdminRequired }) {
             {!listUsers.length ? (
                  <p className="loadingData">Chargement des données ...</p>
              ) : (
-                    <Child userInfos={userInfos} listUsers={listUsers} ladderInfos={listLadder}/>
+                    <Child userInfos={userInfos} listUsers={listUsers} ladderInfos={listLadder} />
             )}
         </>
     );
