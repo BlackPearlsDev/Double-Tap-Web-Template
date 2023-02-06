@@ -8,4 +8,4 @@ Projet en cours de développement.
 ## Prévisualisation
 
 ⬇️ Page d'accueil ⬇️
-![Double Tap home page](https://gyazo.com/5983cd16ab0fc12a8b113640112bc3de.png)
+![Double Tap home page](https://gyazo.com/cfa4f59158209e824a589859cfc24cca.png)
