@@ -25,7 +25,7 @@ function Play() {
             <Container className='play-dofus'>
                 <aside className='play-note'>
                     <h2>NOTE</h2>
-                    <p>Double Tap est un serveur privé non autorisé par Ankama. Nous vous recommandons de jouer sur les serveurs officiels de <a href="https://www.dofus.com/fr/dofus-retro" target={'_blank'} rel="noreferrer">Dofus</a> si vous souhaitez profiter pleinement de l'expérience du jeu. Aucun contenu n'est monétisé et donc non achetable pour obtenir quelconque avantage en jeu.</p>
+                    <p>Double Tap est un serveur privé non autorisé par Ankama. Nous vous recommandons de jouer sur les serveurs officiels de <a href="https://www.dofus.com/fr/dofus-retro" target={'_blank'} rel="noreferrer">Dofus</a> si vous souhaitez profiter pleinement de l'expérience du jeu. Sur Double Tap aucun contenu n'est monétisé et donc non achetable pour obtenir quelconque avantage en jeu.</p>
                 </aside>
            </Container>
 

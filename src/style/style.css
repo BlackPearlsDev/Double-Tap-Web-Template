@@ -187,12 +187,14 @@ nav img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 6%;
 }
 
 .error404 .image-bg {
     width: 250px;
     height: 250px;
     left: 50%;
+    top: 45%;
 }
 
 .link-back {
@@ -429,6 +431,7 @@ nav img {
     margin: 20px;
     width: 700px;
     height: 620px;
+    text-align: center;
     transition: all .4s ease-in-out;
 }
 
@@ -481,16 +484,16 @@ footer {
 
     /* NAV */
     .btnNav {
-        width: 30px;
-        height: 30px;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 40px;
+        height: 40px;
         background-color: #0f131a;
         border-radius: 50%;
         color: white;
         margin: 5%;
-    }
-
-    .btnNav::before {
-        content: "O";
+        align-self: flex-end;
     }
 
     nav {
@@ -501,7 +504,12 @@ footer {
 
     nav div {
         display: flex;
+        flex-direction: row;
+    }
+
+    nav div div {
         flex-direction: column;
+        align-items: flex-end;
     }
 
     /* PAGE HOME */
@@ -611,6 +619,11 @@ footer {
 
 /* dimensions special entre telephone large et tablette */
 @media screen and  (min-width: 500px) and (max-width: 767px) {
+
+    .btnNav {
+        top: 30px;
+        right: 0px;
+    }
 
     .head-section {
         display: block;
