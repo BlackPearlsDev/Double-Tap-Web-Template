@@ -466,6 +466,27 @@ nav img {
 
 /* FIN PAGE NEWS */
 
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #5c5c5c #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0f131a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #1a1d24;
+    border-radius: 5px;
+    border: 1px solid #1a1d24;
+}
+
 .strong-txt {
     font-weight: 600;
     color: rgba(255, 255, 0, .7);
