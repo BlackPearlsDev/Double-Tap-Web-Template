@@ -1,0 +1,401 @@
+/* RSUITE */
+@import '~rsuite/dist/rsuite.min.css';
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap');
+/* font nav */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* font title */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Inter var", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* NAV */
+
+nav img {
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+}
+
+/* nav a title */
+.rs-navbar-brand {
+    font-size: 4rem;
+    margin-left: 10px;
+    padding: 0;
+    font-family: 'Poiret One', cursive;
+}
+
+/* nav a pages btn */
+.rs-navbar-item {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* PAGE HOME */
+/* TOP PAGE HOME */
+
+.head-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-section .rs-container {
+    align-items: center;
+}
+
+.title-gradient, .para-big {
+    font-family: 'Heebo', sans-serif;
+}
+
+.title-gradient {
+    font-size: 5rem;
+    background: -webkit-linear-gradient(90deg, #f6d365, #fda085);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5%;
+}
+
+.para-big {
+    font-size: 4.4rem;
+    font-weight: 600;
+    line-height: 0.9;
+}
+
+.para-medium {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: rgba(235, 235, 245, .6);
+}
+
+.btn-bar-top {
+    margin-top: 5%;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, #f6d365, #fda085);
+}
+
+.link-white {
+    text-decoration: none;
+    color: white;
+}
+
+.link-white:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-home {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+    background-color: #1a1d24;
+    border: 1px solid rgba(82, 82, 89, .68);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.image-bg {
+    position: absolute;
+    top: 33%;
+    left: 75%;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #f6d365 20%, #fda085 100%);
+    filter: blur(72px);
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+}
+
+.img-top-home {
+    z-index: 100;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    padding: 22px;
+    margin: 30px;
+}
+
+/* FIN TOP PAGE HOME */
+
+/* CARD */
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0 30px 0;
+}
+
+.card {
+    width: 25%;
+    background-color: #1a1d24;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    background-color: #0f131a;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.card-para {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(235, 235, 245, .6);
+}
+
+/* FIN CARD */
+/* FIN PAGE HOME */
+
+/* PAGE ERROR 404 */
+.error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error404 .image-bg {
+    width: 250px;
+    height: 250px;
+    left: 50%;
+}
+
+.link-back {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+    background-color: #1a1d24;
+    border: 1px solid rgba(82, 82, 89, .68);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 2%;
+}
+
+/* FIN PAGE ERROR 404 */
+
+footer {
+    text-align: center;
+    background-color: #1a1d24;
+    padding: 10px;
+}
+
+/* -------------------------------------- START MEDIA QUERIES -------------------------------------- */
+
+/* dimensions pour tout les telephones (S, M, L) */
+@media screen and (max-width: 767px) {
+
+    /* NAV */
+    .btnNav {
+        width: 30px;
+        height: 30px;
+        background-color: #0f131a;
+        border-radius: 50%;
+        color: white;
+        margin: 5%;
+    }
+
+    .btnNav::before {
+        content: "O";
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* PAGE HOME */
+    /* TOP PAGE HOME */
+
+    .head-section .rs-container {
+        margin-top: 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .head-section .rs-container article {
+        padding: 5%;
+    }
+
+    .para-big {
+        font-size: 3rem;
+    }
+
+    .btn-bar-top, .btn-bar-top .rs-container {
+        margin: 0;
+    }
+
+    .btn-bar-top .rs-container div {
+        justify-content: center;
+    }
+
+    .image-bg {
+        display: none;
+    }
+
+    .img-top-home {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* FIN TOP PAGE HOME */
+
+    /* CARD */
+
+    .card-section {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px 0 10px 0;
+    }
+    /* FIN CARD */
+    /* FIN PAGE HOME */
+
+    /* PAGE ERROR 404 */
+
+    .error404 {
+        margin: 5%;
+        text-align: center;
+    }
+
+    /* FIN PAGE ERROR 404 */
+}
+
+/* dimensions special entre telephone large et tablette */
+@media screen and  (min-width: 500px) and (max-width: 767px) {
+
+    .head-section {
+        display: block;
+    }
+    
+    .head-section .rs-container {
+        margin: 0;
+    }
+
+    .card-section {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 35%;
+        height: 280px;
+        margin: 10px;
+    }
+}
+
+/* dimensions entre tablette et laptop */
+@media screen and  (min-width: 768px) and (max-width: 1023px) {
+
+    /* NAV */
+
+    /* nav a pages btn */
+    .rs-navbar-item {
+        font-size: 1.6rem;
+    }
+
+    /* PAGE HOME */
+    /* TOP PAGE HOME */
+
+    .head-section {
+        margin: 5%;
+    }
+
+    .para-big {
+        font-size: 3.5rem;
+    }
+
+    .rs-btn-toolbar {
+        display: none;
+    }
+
+    .image-bg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .img-top-home {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* FIN TOP PAGE HOME */
+
+    /* CARD */
+
+    .card {
+        width: 30%;
+        height: 280px;
+    }
+    /* FIN CARD */
+    /* FIN PAGE HOME */
+
+    /* PAGE ERROR 404 */
+
+    .error404 {
+        margin: 5%;
+        text-align: center;
+    }
+
+    .error404 .image-bg {
+        top: 35%;
+    }
+
+    /* FIN PAGE ERROR 404 */
+}
+
+/* laptop et ecran moyen */
+@media screen and  (min-width: 1023px) and (max-width: 1700px) {
+
+    .head-section {
+        margin: 5%;
+    }
+
+    .card {
+        height: 280px;
+    }
+}
