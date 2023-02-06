@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.ec761140.css",
-    "main.js": "/static/js/main.68d53a9d.js",
-    "static/media/news-3.jpg": "/static/media/news-3.9a170870d5f1c22239c3.jpg",
-    "static/media/img_top_home.png": "/static/media/img_top_home.a90dfb2ec218e25160bd.png",
-    "static/media/news-4.jpg": "/static/media/news-4.18601e0e52d24c5192ba.jpg",
-    "static/media/news-2.jpg": "/static/media/news-2.acdd3f28e666ecb60307.jpg",
-    "static/media/news-1.jpg": "/static/media/news-1.40d4a206d7e403c2811b.jpg",
-    "static/media/dark-sword.png": "/static/media/dark-sword.87071beb44f598f38920.png",
-    "static/media/icon_zaap.png": "/static/media/icon_zaap.4ec9004b2343365f220b.png",
-    "static/media/dofus_emeraude.png": "/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
-    "static/media/icon_amalia.png": "/static/media/icon_amalia.db4ce645c8422fac32ae.png",
-    "index.html": "/index.html",
-    "main.ec761140.css.map": "/static/css/main.ec761140.css.map",
-    "main.68d53a9d.js.map": "/static/js/main.68d53a9d.js.map"
+    "main.css": "/Double-Tap-Web-Template/static/css/main.ec761140.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.734e50af.js",
+    "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.9a170870d5f1c22239c3.jpg",
+    "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
+    "static/media/news-4.jpg": "/Double-Tap-Web-Template/static/media/news-4.18601e0e52d24c5192ba.jpg",
+    "static/media/news-2.jpg": "/Double-Tap-Web-Template/static/media/news-2.acdd3f28e666ecb60307.jpg",
+    "static/media/news-1.jpg": "/Double-Tap-Web-Template/static/media/news-1.40d4a206d7e403c2811b.jpg",
+    "static/media/dark-sword.png": "/Double-Tap-Web-Template/static/media/dark-sword.87071beb44f598f38920.png",
+    "static/media/icon_zaap.png": "/Double-Tap-Web-Template/static/media/icon_zaap.4ec9004b2343365f220b.png",
+    "static/media/dofus_emeraude.png": "/Double-Tap-Web-Template/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
+    "static/media/icon_amalia.png": "/Double-Tap-Web-Template/static/media/icon_amalia.db4ce645c8422fac32ae.png",
+    "index.html": "/Double-Tap-Web-Template/index.html",
+    "main.ec761140.css.map": "/Double-Tap-Web-Template/static/css/main.ec761140.css.map",
+    "main.734e50af.js.map": "/Double-Tap-Web-Template/static/js/main.734e50af.js.map"
   },
   "entrypoints": [
     "static/css/main.ec761140.css",
-    "static/js/main.68d53a9d.js"
+    "static/js/main.734e50af.js"
   ]
 }
