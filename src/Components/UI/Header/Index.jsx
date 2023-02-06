@@ -38,7 +38,7 @@ function Header() {
                         <Nav.Menu title="Autres">
                             <Nav.Item as={NavLink} href="/">Support</Nav.Item>
                             <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
-                            <Nav.Item as={NavLink} href="/developper">Équipe</Nav.Item>
+                            <Nav.Item as={NavLink} href="/team">Équipe</Nav.Item>
                         </Nav.Menu>
                     </Nav>
                     </>
@@ -56,9 +56,7 @@ function Header() {
                                     <Nav.Menu title="Autres">
                                         <Nav.Item as={NavLink} href="/">Support</Nav.Item>
                                         <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
-                                        <Nav.Menu title="Développeurs">
-                                            <Nav.Item as={NavLink} href="https://github.com/BlackPearlsDev">Black Pearl</Nav.Item>
-                                        </Nav.Menu>
+                                        <Nav.Item as={NavLink} href="/team">Équipe</Nav.Item>
                                     </Nav.Menu>
                                 </Nav>
                                 <button onClick={() => setIsToggle(!isToggle)} className="btnNav"></button>

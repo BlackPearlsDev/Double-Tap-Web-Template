@@ -6,7 +6,7 @@ import Play from "../Components/Pages/Play/Index";
 import News from "../Components/Pages/News/Index";
 
 
-import Developper from "../Components/Pages/Team/Index";
+import Team from "../Components/Pages/Team/Index";
 import NotFound from "../Components/Pages/NotFound/Index";
 
 function Router() {
@@ -15,7 +15,7 @@ function Router() {
             <Route index path="/" element={<Home />} />
             <Route path="/play" element={<Play />} />
             <Route path="/news" element={<News />} />
-            <Route path="/developper" element={<Developper />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/Double-Tap-Web-Template" element={<Home />} /> {/* For GitHub Pages */}
             <Route path="*" element={<NotFound />}/>
         </Routes>

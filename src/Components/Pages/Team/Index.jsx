@@ -6,7 +6,7 @@ import { Badge } from 'rsuite';
 import IconDarkSword from '../../../assets/img/dark-sword.png';
 
 
-function Developper() {
+function Team() {
     return (
         <main className='main-dev'>
             <article className='meet-dev-team'>
@@ -67,4 +67,4 @@ function Developper() {
     )
 }
 
-export default Developper;
+export default Team;
