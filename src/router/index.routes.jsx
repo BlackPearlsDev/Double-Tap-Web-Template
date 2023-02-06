@@ -6,7 +6,7 @@ import Play from "../Components/Pages/Play/Index";
 import News from "../Components/Pages/News/Index";
 
 
-import Developper from "../Components/Pages/Developper/Index";
+import Developper from "../Components/Pages/Team/Index";
 import NotFound from "../Components/Pages/NotFound/Index";
 
 function Router() {

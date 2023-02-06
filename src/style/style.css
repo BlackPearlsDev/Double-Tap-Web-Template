@@ -312,6 +312,9 @@ nav img {
 .meet-dev-team p {
     color: rgba(235, 235, 245, .6);
     font-size: 2rem;
+    max-width: 592px;
+    line-height: 28px;
+    text-align: center;
 }
 
 .container-dev, .container-partner {
@@ -332,7 +335,7 @@ nav img {
     background-color: #1a1d24;
     border-radius: 10px;
     padding: 20px;
-    margin: 0 10px 20px 10px;
+    margin: 30px 10px 20px 10px;
     width: 350px;
     height: 350px;
 }
@@ -399,10 +402,66 @@ nav img {
     font-size: 2.5rem;
     font-weight: 600;
     color: white;
-    margin: 20px 0;
 }
 
 /* FIN PAGE DEV */
+
+/* PAGE NEWS */
+
+.news-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.card-news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1d24;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    width: 700px;
+    height: 620px;
+    transition: all .4s ease-in-out;
+}
+
+.card-news:hover {
+    background-color: #1a1d24;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, .7);
+    transform: scale(1.02);
+    transition: all .4s ease-in-out;
+}
+
+.card-news-img {
+    width: 100%;
+    height: 360px;
+    background-color: rgba(235, 235, 245, .6);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-news-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.card-news-para, .card-news-date {
+    font-size: 1.6rem;
+    color: rgba(235, 235, 245, .6);
+    margin-bottom: 10px;
+}
+
+/* FIN PAGE NEWS */
 
 .strong-txt {
     font-weight: 600;
@@ -514,10 +573,31 @@ footer {
 
     .meet-dev-team p {
         margin-top: 25px;
-        text-align: center;
     }
 
     /* FIN PAGE DEV */
+
+    /* PAGE NEWS */
+
+    .card-news {
+        justify-content: initial;
+        height: 500px;
+    }
+
+    .card-news-title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .card-news-para, .card-news-date {
+        margin-bottom: 10px;
+    }
+
+    .card-news-img {
+        height: 160px;
+    }
+
+    /* FIN PAGES NEWS */
 
     /* PAGE ERROR 404 */
 
@@ -548,6 +628,14 @@ footer {
         width: 35%;
         height: 280px;
         margin: 10px;
+    }
+
+    .card-news {
+        height: 540px;
+    }
+
+    .card-news-img {
+        height: 280px;
     }
 }
 
@@ -601,7 +689,6 @@ footer {
 
     .meet-dev-team p {
         margin-top: 25px;
-        text-align: center;
     }
 
     .container-dev, .container-partner {

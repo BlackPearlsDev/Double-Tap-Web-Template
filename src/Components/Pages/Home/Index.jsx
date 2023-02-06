@@ -64,12 +64,12 @@ function Home() {
             </section>
 
             <section className='card-section'>
-                <Card imgName={DofusLogo} imgAlt="Le logo de Dofus, le jeu vidéo d'Ankama." title="Redécouvrez le jeu" para="Vous êtes fan de Dofus et vous connaissez le jeu par coeur. Venez le redécouvrir."/>
-                <Card imgName={IconSword} imgAlt="Une icône d'épée venant de Dofus." title="Un gameplay fluide" para="Un nouveau gameplay vous y est proposé, de nouvelles choses sont à découvrir et à dévorer."/>
-                <Card imgName={IconZaap} imgAlt="Une icône de Zaap venant de Dofus." title="Les dimensions sont ouvertes" para="Partout dans le monde se sont ouvertes des failles menant à des dimensions, seriez-vous les trouver ?"/>
-                <Card imgName={IconMonster} imgAlt="Une icône d'un monstre venant de Dofus." title="Un bestiaire plus diversifié" para="Vous connaissez déjà toutes les stratégies de combat ? Venez vous mesurer à des nouveaux monstres."/>
-                <Card imgName={IconMap} imgAlt="Une icône de la map venant de Dofus." title="Des nouvelles zones" para="Le Monde des Douzes n'est plus un secret pour vous ? Venez découvrir un nouvel environnement."/>
-                <Card imgName={IconAmalia} imgAlt="Une icône d'Amalia venant de Wakfu" title="Contenu officiel" para="Habitué au contenu officiel ? Arène, métiers, Gladiatrool, traques etc .. Tout est là !"/>
+                <Card imgSrc={DofusLogo} imgAlt="Le logo de Dofus, le jeu vidéo d'Ankama." title="Redécouvrez le jeu" para="Vous êtes fan de Dofus et vous connaissez le jeu par coeur. Venez le redécouvrir."/>
+                <Card imgSrc={IconSword} imgAlt="Une icône d'épée venant de Dofus." title="Un gameplay fluide" para="Un nouveau gameplay vous y est proposé, de nouvelles choses sont à découvrir et à dévorer."/>
+                <Card imgSrc={IconZaap} imgAlt="Une icône de Zaap venant de Dofus." title="Les dimensions sont ouvertes" para="Partout dans le monde se sont ouvertes des failles menant à des dimensions, seriez-vous les trouver ?"/>
+                <Card imgSrc={IconMonster} imgAlt="Une icône d'un monstre venant de Dofus." title="Un bestiaire plus diversifié" para="Vous connaissez déjà toutes les stratégies de combat ? Venez vous mesurer à des nouveaux monstres."/>
+                <Card imgSrc={IconMap} imgAlt="Une icône de la map venant de Dofus." title="Des nouvelles zones" para="Le Monde des Douzes n'est plus un secret pour vous ? Venez découvrir un nouvel environnement."/>
+                <Card imgSrc={IconAmalia} imgAlt="Une icône d'Amalia venant de Wakfu" title="Contenu officiel" para="Habitué au contenu officiel ? Arène, métiers, Gladiatrool, traques etc .. Tout est là !"/>
             </section>
         </main>
     )
