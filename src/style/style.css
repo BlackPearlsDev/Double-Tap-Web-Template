@@ -209,6 +209,95 @@ nav img {
 
 /* FIN PAGE ERROR 404 */
 
+/* PAGE PLAY */
+
+.play-dofus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.play-note h2 {
+    font-size: 2.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.play-note {
+    width: 60%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #bcc0ff;
+    margin: 2%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    border-color: #646cff;
+    background-color: rgba(100, 108, 255, .08);
+    padding: 20px;
+}
+
+.play-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.para-pos {
+    display: flex;
+    gap: 20px;
+    margin-top: 4%;
+}
+
+.para-download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgba(235, 235, 245, .6);
+    width: 100%;
+}
+
+.btn-download {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+    background-color: #1a1d24;
+    border: 1px solid rgba(82, 82, 89, .68);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 2%;
+    width: 50%;
+    text-align: center;
+}
+
+.play-deco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.play-deco .image-bg {
+    top: 90%;
+    left: 50%;
+}
+
+/* FIN PAGE PLAY */
+
+.strong-txt {
+    font-weight: 600;
+    color: rgba(255, 255, 0, .7);
+}
+
 footer {
     text-align: center;
     background-color: #1a1d24;
@@ -295,6 +384,20 @@ footer {
     }
     /* FIN CARD */
     /* FIN PAGE HOME */
+
+    /* PAGE PLAY */
+
+    .play-dofus {
+        margin: 30px auto;
+    }
+
+    .play-note {
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+/* FIN PAGE PLAY */
 
     /* PAGE ERROR 404 */
 

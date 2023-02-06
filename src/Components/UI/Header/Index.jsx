@@ -32,7 +32,7 @@ function Header() {
                     <Navbar.Brand href="/">DOUBLE TAP</Navbar.Brand>
 
                     <Nav pullRight>
-                        <Nav.Item as={NavLink} href="/">Jouer</Nav.Item>
+                        <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
                         <Nav.Item as={NavLink} href="/">Nouveautés</Nav.Item>
                         <Nav.Item as={NavLink} href="/">Classement</Nav.Item>
                         <Nav.Menu title="Autres">
@@ -52,7 +52,7 @@ function Header() {
                                 <Navbar.Brand href="/">DOUBLE TAP</Navbar.Brand>
 
                                 <Nav pullRight>
-                                    <Nav.Item as={NavLink} href="/">Jouer</Nav.Item>
+                                    <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
                                     <Nav.Item as={NavLink} href="/">Nouveautés</Nav.Item>
                                     <Nav.Item as={NavLink} href="/">Classement</Nav.Item>
                                     <Nav.Menu title="Autres">
