@@ -6,6 +6,8 @@ function News() {
         <main>
             <Container>
                 <h1>Nouveautés</h1>
+
+                <p>under construct ... come back later pls</p>
             </Container>
         </main>
     )

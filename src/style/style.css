@@ -293,6 +293,117 @@ nav img {
 
 /* FIN PAGE PLAY */
 
+/* PAGE DEV */
+
+.main-dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.meet-dev-team h1 {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.meet-dev-team p {
+    color: rgba(235, 235, 245, .6);
+    font-size: 2rem;
+}
+
+.container-dev, .container-partner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.card-dev, .card-partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1d24;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.card-dev .dev-badge-online, .card-dev .dev-badge-offline, .card-partner .partner-badge-offline {
+    position: relative;
+    top: 5px;
+    left: -30px;
+    z-index: 000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.card-dev .dev-name, .card-partner .partner-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+}
+
+.card-dev .dev-role, .card-partner .partner-role {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(235, 235, 245, .6);
+}
+
+.card-dev .dev-desc, .card-partner .partner-desc {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    max-width: 290px;
+    text-align: center;
+}
+
+.card-dev .social-media, .card-partner .social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-dev .social-media a, .card-partner .social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: rgba(235, 235, 245, .6);
+}
+
+.card-dev .social-media a svg, .card-partner .social-media a svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.div-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(235, 235, 245, .6);
+    margin: 20px 0;
+}
+
+.title-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    margin: 20px 0;
+}
+
+/* FIN PAGE DEV */
+
 .strong-txt {
     font-weight: 600;
     color: rgba(255, 255, 0, .7);
@@ -397,7 +508,16 @@ footer {
         width: 100%;
     }
 
-/* FIN PAGE PLAY */
+    /* FIN PAGE PLAY */
+
+    /* PAGE DEV */
+
+    .meet-dev-team p {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    /* FIN PAGE DEV */
 
     /* PAGE ERROR 404 */
 
@@ -476,6 +596,20 @@ footer {
     }
     /* FIN CARD */
     /* FIN PAGE HOME */
+
+    /* PAGE DEV */
+
+    .meet-dev-team p {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .container-dev, .container-partner {
+        /* flex-direction: row; */
+        flex-wrap: nowrap;
+    }
+
+    /* FIN PAGE DEV */
 
     /* PAGE ERROR 404 */
 

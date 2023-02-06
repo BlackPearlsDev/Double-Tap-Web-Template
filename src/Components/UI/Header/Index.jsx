@@ -38,9 +38,7 @@ function Header() {
                         <Nav.Menu title="Autres">
                             <Nav.Item as={NavLink} href="/">Support</Nav.Item>
                             <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
-                            <Nav.Menu title="Développeurs">
-                            <Nav.Item as={NavLink} href="https://github.com/BlackPearlsDev" target={"_blank"}>Black Pearl</Nav.Item>
-                            </Nav.Menu>
+                            <Nav.Item as={NavLink} href="/developper">Équipe</Nav.Item>
                         </Nav.Menu>
                     </Nav>
                     </>

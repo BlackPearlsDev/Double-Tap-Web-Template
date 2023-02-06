@@ -45,8 +45,8 @@ function Home() {
                     <aside className='btn-bar-top'>
                         <Container>
                             <ButtonToolbar>
-                                <Button appearance="primary" size="lg" className='btn-home btn-gradient'><Link to={"/"} className="link-white">Jouer</Link></Button>
-                                <Button appearance="default" size="lg" className='btn-home'><Link to={"/"} className="link-white">Nouveautés</Link></Button>
+                                <Button appearance="primary" size="lg" className='btn-home btn-gradient'><Link to={"/play"} className="link-white">Jouer</Link></Button>
+                                <Button appearance="default" size="lg" className='btn-home'><Link to={"/news"} className="link-white">Nouveautés</Link></Button>
                                 <Button appearance="default" size="lg" className='btn-home'><Link to={"/"} className="link-white">Classement</Link></Button>
                             </ButtonToolbar>
                         </Container>
