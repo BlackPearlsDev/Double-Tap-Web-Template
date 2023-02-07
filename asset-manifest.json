@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Double-Tap-Web-Template/static/css/main.f827271d.css",
-    "main.js": "/Double-Tap-Web-Template/static/js/main.cec48833.js",
+    "main.css": "/Double-Tap-Web-Template/static/css/main.782c91a1.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.727e490f.js",
     "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.9a170870d5f1c22239c3.jpg",
     "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
     "static/media/news-4.jpg": "/Double-Tap-Web-Template/static/media/news-4.18601e0e52d24c5192ba.jpg",
@@ -14,11 +14,11 @@
     "static/media/dofus_emeraude.png": "/Double-Tap-Web-Template/static/media/dofus_emeraude.dcdbc80207343fb5986c.png",
     "static/media/icon_amalia.png": "/Double-Tap-Web-Template/static/media/icon_amalia.db4ce645c8422fac32ae.png",
     "index.html": "/Double-Tap-Web-Template/index.html",
-    "main.f827271d.css.map": "/Double-Tap-Web-Template/static/css/main.f827271d.css.map",
-    "main.cec48833.js.map": "/Double-Tap-Web-Template/static/js/main.cec48833.js.map"
+    "main.782c91a1.css.map": "/Double-Tap-Web-Template/static/css/main.782c91a1.css.map",
+    "main.727e490f.js.map": "/Double-Tap-Web-Template/static/js/main.727e490f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f827271d.css",
-    "static/js/main.cec48833.js"
+    "static/css/main.782c91a1.css",
+    "static/js/main.727e490f.js"
   ]
 }
