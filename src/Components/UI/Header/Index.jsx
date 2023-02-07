@@ -74,11 +74,13 @@ function Header() {
                             </>
                             : 
                             <>
-                                <img src={DofusIcon} alt="Le logo de Dofus, MMORPG français créer par Ankama" />
-                                <Navbar.Brand href="/">DOUBLE TAP</Navbar.Brand>
-                                <button onClick={() => setIsToggle(!isToggle)} className="btnNav">
-                                    <ChartIconOpen size={20} />
-                                </button>
+                                <div className='div-nav-flex-mobile'>
+                                    <img src={DofusIcon} alt="Le logo de Dofus, MMORPG français créer par Ankama" />
+                                    <Navbar.Brand href="/">DOUBLE TAP</Navbar.Brand>
+                                    <button onClick={() => setIsToggle(!isToggle)} className="btnNav">
+                                        <ChartIconOpen size={20} />
+                                    </button>
+                                </div>
                             </>
                             }
                     </>

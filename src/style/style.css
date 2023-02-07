@@ -638,6 +638,10 @@ nav img {
     text-align: center;
 }
 
+.rs-toast {
+    margin-top: 15%;
+}
+
 /* FIN PAGE REGISTER */
 
 /* PAGE SUCCES */
@@ -648,15 +652,24 @@ nav img {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+}
+
+.succes-infos h1 {
+    font-size: 4rem;
+    margin-top: 2%;
 }
 
 .succes-infos p {
-    font-size: 2rem;
+    font-size: 2.8rem;
     color: rgba(235, 235, 245, .6);
     margin-bottom: 20px;
     max-width: 500px;
     text-align: center;
+    margin: 2%;
+}
+
+.succes-infos a {
+    margin: 2%;
 }
 
 /* FIN PAGE SUCCES */
@@ -722,23 +735,32 @@ footer {
 @media screen and (max-width: 767px) {
 
     /* NAV */
+
+    .div-nav-flex-mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
     .btnNav {
-        position: absolute;
-        top: 40px;
-        right: 0;
         width: 40px;
         height: 40px;
         background-color: #0f131a;
         border-radius: 50%;
         color: white;
-        margin: 5%;
-        align-self: flex-end;
+        margin: 3%;
     }
 
     nav {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .rs-navbar-brand {
+        font-size: 3rem;
+        margin-top: 4%;
     }
 
     nav div {
@@ -877,6 +899,42 @@ footer {
     }
 
     /* FIN PAGE SERVER DOWN */
+
+    /* PAGE REGISTER */
+
+    .rs-toast {
+        display: none;
+    }
+
+    /* FIN PAGE REGISTER */
+
+    /* PAGE SUCCES */
+
+    .succes-infos {
+        width: 100%;
+        height: auto;
+    }
+
+    .succes-infos h1 {
+        font-size: 3.5rem;
+        margin: 5%;
+    }
+    
+    .succes-infos p {
+        font-size: 2rem;
+        margin: 5%;
+    }
+
+    .succes-infos img {
+        width: 80%;
+        margin: 5%;
+    }
+
+    .succes-infos a {
+        margin: 5%;
+    }
+    
+    /* FIN PAGE SUCCES */
 }
 
 /* dimensions special entre telephone large et tablette */
@@ -1015,6 +1073,34 @@ footer {
     }
 
     /* FIN PAGE SERVER DOWN */
+
+    /* PAGE SUCCES */
+
+    .succes-infos {
+        width: 100%;
+        height: auto;
+    }
+
+    .succes-infos h1 {
+        font-size: 3.5rem;
+        margin: 5%;
+    }
+    
+    .succes-infos p {
+        font-size: 2rem;
+        margin: 5%;
+    }
+
+    .succes-infos img {
+        width: 60%;
+        margin: 5%;
+    }
+
+    .succes-infos a {
+        margin: 5%;
+    }
+
+    /* FIN PAGE SUCCES */
 }
 
 /* laptop et ecran moyen */
