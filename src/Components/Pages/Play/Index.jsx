@@ -24,14 +24,13 @@ function Play() {
         <main>
             <Container className='play-dofus'>
                 <aside className='play-note'>
-                    <h2>NOTE</h2>
+                    <h1>NOTE</h1>
                     <p>Double Tap est un serveur privé non autorisé par Ankama. Nous vous recommandons de jouer sur les serveurs officiels de <a href="https://www.dofus.com/fr/dofus-retro" target={'_blank'} rel="noreferrer">Dofus</a> si vous souhaitez profiter pleinement de l'expérience du jeu. Sur Double Tap aucun contenu n'est monétisé et donc non achetable pour obtenir quelconque avantage en jeu.</p>
                 </aside>
            </Container>
 
            <Container className='play-download'>
                 <h2>Comment jouer ?</h2>
-
                 <p>Pour nous rejoindre il vous faudra télécharger notre version du jeu.</p>
 
                 {widthScreen > 767 ? (
@@ -56,6 +55,11 @@ function Play() {
                     </div>
                 </>
                 )}
+            </Container>
+
+            <Container className='play-register'>
+                <h2>S'inscrire !</h2>
+                <p>En effet, disposer du client ne suffit pour accéder au serveur, il vous faudra également <Link to="/register">créer un compte</Link>.</p>
             </Container>
 
             <Container className='play-deco'>

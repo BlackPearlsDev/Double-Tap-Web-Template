@@ -8,7 +8,7 @@ export const validate = (inputs) => {
     }
 
     if (window.location.pathname === "/register") {
-        if (inputs.email.trim().length < 3 || inputs.password.trim().length < 3) {
+        if (inputs.secretKey.trim().length < 8 || inputs.password.trim().length < 8) {
             return "3 caractères minimum";
         } else return true;
     }

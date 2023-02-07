@@ -222,12 +222,12 @@ nav img {
     margin: 20px auto;
 }
 
-.play-note h2 {
+.play-note h1, .register-note h1 {
     font-size: 2.8rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.play-note {
+.play-note, .register-note {
     width: 60%;
     font-size: 1.8rem;
     font-weight: 400;
@@ -240,13 +240,17 @@ nav img {
     padding: 20px;
 }
 
-.play-download {
+.play-download, .play-register {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 80%;
     margin: 20px auto;
+}
+
+.play-register {
+    margin: 60px auto;
 }
 
 .para-pos {
@@ -288,8 +292,8 @@ nav img {
     margin: 20px auto;
 }
 
-.play-deco .image-bg, .ladder-deco .image-bg {
-    top: 90%;
+.play-deco .image-bg {
+    top: 110%;
     left: 50%;
 }
 
@@ -468,13 +472,39 @@ nav img {
 
 /* PAGE LADDER */
 
+.ladder-infos, .register-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.ladder-infos h1, .register-infos h1, .succes-infos h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.ladder-infos p, .register-infos p {
+    font-size: 2rem;
+    color: rgba(235, 235, 245, .6);
+    margin-top: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+
 .ladder-container {
     width: 50%;
-    margin: 5% auto;
+    margin: 3% auto;
 }
 
 .ladder-container div {
     border-radius: 10px;
+}
+
+.ladder-deco .image-bg {
+    top: 105%;
+    left: 50%;
 }
 
 /* table title column */
@@ -541,7 +571,118 @@ nav img {
     transition: all .4s ease-in-out;
 }
 
+/* PAGE REGISTER */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register-note {
+    width: 50%;
+}
+
+.form-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0 10px 0;
+}
+
+.form-register input {
+    font-size: 1.6rem;
+    color: white;
+    background-color: #1a1d24;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    width: 320px;
+    transition: all .4s ease-in-out;
+}
+
+.form-register input:hover {
+    background-color: #1a1d24;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, .7);
+    transform: scale(1.02);
+    transition: all .4s ease-in-out;
+}
+
+.form-register button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1a1d24;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: all .4s ease-in-out;
+}
+
+.form-register button:hover {
+    color: rgba(235, 235, 245, .6);
+    background-color: #1a1d24;
+    transform: scale(1.02);
+    transition: all .4s ease-in-out;
+}
+
+.txtErrorEntry {
+    font-size: 1.6rem;
+    color: rgba(255, 0, 0, .8);
+    margin: 10px 0 30px 0;
+    text-align: center;
+}
+
+/* FIN PAGE REGISTER */
+
+/* PAGE SUCCES */
+
+.succes-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.succes-infos p {
+    font-size: 2rem;
+    color: rgba(235, 235, 245, .6);
+    margin-bottom: 20px;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* FIN PAGE SUCCES */
+
 /* FIN PAGE SERVER DOWN */
+
+.back-home-btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1a1d24;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: all .4s ease-in-out;
+    text-decoration: none;
+}
+
+.back-home-btn:hover {
+    color: rgba(235, 235, 245, .6);
+    background-color: #1a1d24;
+    transform: scale(1.02);
+    transition: all .4s ease-in-out;
+    text-decoration: none;
+}
 
 /* Firefox */
 * {
@@ -667,10 +808,15 @@ footer {
         margin: 30px auto;
     }
 
-    .play-note {
+    .play-note, .register-note {
         margin: 0;
         padding: 15px;
         width: 100%;
+    }
+
+    .register-note {
+        width: 90%;
+        margin: 10%;
     }
 
     /* FIN PAGE PLAY */
@@ -686,8 +832,8 @@ footer {
     /* PAGE NEWS */
 
     .card-news {
-        justify-content: initial;
-        height: 500px;
+        justify-content: space-between;
+        height: 550px;
     }
 
     .card-news-title {
@@ -771,8 +917,12 @@ footer {
 /* dimension special pour le 768px qui fais chier des fois */
 @media screen and (min-width: 768px) and (max-width: 768px) {
     
+    .play-deco .image-bg {
+        top: 115%;
+    }
+
     .ladder-deco .image-bg {
-        top: 43%;
+        top: 60%;
     }
 
 }
@@ -823,6 +973,14 @@ footer {
     /* FIN CARD */
     /* FIN PAGE HOME */
 
+    /* PAGE PLAY */
+
+    .play-deco .image-bg {
+        top: 130%;
+    }
+
+    /* FIN PAGE PLAY */
+
     /* PAGE DEV */
 
     .meet-dev-team p {
@@ -849,14 +1007,14 @@ footer {
 
     /* FIN PAGE ERROR 404 */
 
-        /* PAGE SERVER DOWN */
-    
-        .section-error img {
-            margin: 5%;
-            width: 90%;
-        }
-    
-        /* FIN PAGE SERVER DOWN */
+    /* PAGE SERVER DOWN */
+
+    .section-error img {
+        margin: 5%;
+        width: 90%;
+    }
+
+    /* FIN PAGE SERVER DOWN */
 }
 
 /* laptop et ecran moyen */

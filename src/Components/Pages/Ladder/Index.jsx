@@ -67,6 +67,10 @@ function Ladder({ladderInfos, fetchError}) {
 
     return (
         <main>
+            <article className='ladder-infos'>
+                <h1>Sur le toit du monde</h1>
+                <p>Voici le classement des meilleurs joueurs du serveur. Il est mis à jour en temps réel.</p>
+            </article>
             <Container className='ladder-container'>
                 {widthScreen > 768 ? (
                 <Table height={400} data={getData()} sortColumn={sortColumn} sortType={sortType} onSortColumn={handleSortColumn} loading={loading}>

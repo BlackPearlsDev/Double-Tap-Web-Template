@@ -1,11 +1,8 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Container }  from 'rsuite';
+import { Link } from 'react-router-dom';
 import ImgError from '../assets/img/maintenance.jpg';
 
 function Error() {
-
-    const navigate = useNavigate();
 
     return (
         <main>
@@ -13,7 +10,7 @@ function Error() {
                 <h1>Serveur hors ligne</h1>
                 <p>La page que vous essayez d'atteindre n'est pas disponible car le serveur est hors ligne.</p>
                 <img src={ImgError} alt="Erreur 404" />
-                <button onClick={() => navigate("/")}>Retour à l'accueil</button>
+                <Link to="/" className='back-home-btn'>Retour à l'accueil</Link>
             </Container>
         </main>
     )
