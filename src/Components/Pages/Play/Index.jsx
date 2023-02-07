@@ -42,8 +42,8 @@ function Play() {
                         </div>
 
                         <div className='para-download'>
-                            <Link to="/" className='btn-download'>Launcher</Link>
-                            <Link to="/" className='btn-download'>Client complet</Link>
+                            <a href="https://www.mediafire.com" target={'_blank'} rel="noreferrer" className='btn-download'>Launcher</a>
+                            <a href="https://www.mediafire.com" target={'_blank'} rel="noreferrer" className='btn-download'>Client complet</a>
                         </div>
                     </div>
                 </>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from 'rsuite';
 import { Avatar } from 'rsuite';
 import { Badge } from 'rsuite';

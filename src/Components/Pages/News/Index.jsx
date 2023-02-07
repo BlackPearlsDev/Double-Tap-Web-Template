@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from 'rsuite';
 import CardNews from '../../UI/CardNews/Index';
 

@@ -4,9 +4,6 @@ Projet en cours de développement.
 
 En ligne à cette adresse : https://blackpearlsdev.github.io/Double-Tap-Web-Template/
 
-
-<!-- add a photo copilot pls -->
-
 ## Prévisualisation
 
 ⬇️ Page d'accueil ⬇️
@@ -16,14 +13,16 @@ En ligne à cette adresse : https://blackpearlsdev.github.io/Double-Tap-Web-Temp
 ### Pages disponibles :
 
 ✔️ = Disponible
-⚠️ = Disponible mais non fonctionnelle
+⚠️ = Disponible mais non fonctionnelle car server side
 ❌ = Non disponible
 
-- [✔️] Page d'accueil
+- [✔️] Page "Accueil"
 - [✔️] Page "Jouer"
 - [✔️] Page "Nouveautés"
-- [⚠️] Page "Classement" (seulement en local car server side, fais crash si vous cliquez dessus)
+- [⚠️] Page "Classement"
 - [❌] Page "Autres > Support"
 - [❌] Page "Autres > Discord"
 - [✔️] Page "Autres > Équipe"
 - [✔️] Page "Serveur hors ligne" : https://blackpearlsdev.github.io/error
+- [⚠️] Page "Inscription"
+- [✔️] Page "Validation" : https://blackpearlsdev.github.io/success
