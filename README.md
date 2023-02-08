@@ -13,7 +13,7 @@ En ligne à cette adresse : https://blackpearlsdev.github.io/Double-Tap-Web-Temp
 ### Pages disponibles :
 
 ✔️ = Disponible
-⚠️ = Disponible mais non fonctionnelle car server side
+⚠️ = Fonctionnelle mais non disponible car server side
 ❌ = Non disponible
 
 - [✔️] Page "Accueil"
@@ -23,6 +23,8 @@ En ligne à cette adresse : https://blackpearlsdev.github.io/Double-Tap-Web-Temp
 - [❌] Page "Autres > Support"
 - [❌] Page "Autres > Discord"
 - [✔️] Page "Autres > Équipe"
-- [✔️] Page "Serveur hors ligne" : https://blackpearlsdev.github.io/error
+- [✔️] Page "Serveur hors ligne"
 - [⚠️] Page "Inscription"
-- [✔️] Page "Validation" : https://blackpearlsdev.github.io/success
+- [⚠️] Page "Connexion"
+- [⚠️] Page "Compte"
+- [✔️] Page "Validation"

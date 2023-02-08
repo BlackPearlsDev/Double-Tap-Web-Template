@@ -3,9 +3,20 @@ import { Container } from 'rsuite';
 import { useNavigate } from 'react-router-dom';
 import { validate } from "../../../Helpers/sanitize";
 import { register } from "../../../services/API/user";
-import { Form, ButtonToolbar, Button } from 'rsuite';
+import { Form, ButtonToolbar, Button, Input, InputGroup, Whisper, Tooltip } from 'rsuite';
+import EyeIcon from '@rsuite/icons/legacy/Eye';
+import EyeSlashIcon from '@rsuite/icons/legacy/EyeSlash';
 
 function Register() {
+
+    const styles = {
+        width: 300
+    };
+    const [visible, setVisible] = useState(false);
+
+    const handleChange = () => {
+        setVisible(!visible);
+    };
 
     const [errorVisible, setErrorVisible] = useState(false);
     const [userExist, setUserExist] = useState(false);
@@ -79,11 +90,25 @@ function Register() {
                     </Form.Group>
 
                     <Form.Group controlId="password">
-                        <Form.Control name="password" placeholder='Mot de passe (8 caractères minimum)' errorMessage={errorMessage} errorPlacement={errorPlacement} type='password'/>
+                        <InputGroup inside style={styles}>
+                            <Whisper trigger="focus" speaker={<Tooltip>Saisie obligatoire</Tooltip>}>
+                                <Input type={visible ? 'text' : 'password'} placeholder='Mot de passe (8 caractères minimum)'/>
+                            </Whisper>
+                            <InputGroup.Button onClick={handleChange}>
+                                {visible ? <EyeSlashIcon /> : <EyeIcon />}
+                            </InputGroup.Button>
+                        </InputGroup>
                     </Form.Group>
 
                     <Form.Group controlId="passwordConfirm">
-                        <Form.Control name="passwordConfirm" placeholder='Confirmation mot de passe' errorMessage={errorMessage} errorPlacement={errorPlacement} type='password'/>
+                        <InputGroup inside style={styles}>
+                            <Whisper trigger="focus" speaker={<Tooltip>Saisie obligatoire</Tooltip>}>
+                                <Input type={visible ? 'text' : 'password'} placeholder='Confirmation mot de passe'/>
+                            </Whisper>
+                            <InputGroup.Button onClick={handleChange}>
+                                {visible ? <EyeSlashIcon /> : <EyeIcon />}
+                            </InputGroup.Button>
+                        </InputGroup>
                     </Form.Group>
 
                     <ButtonToolbar>

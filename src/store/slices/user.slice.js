@@ -18,7 +18,7 @@ const userSlice = createSlice({
             state.isLogged = false;
         },
         loadUsers(state, action) {
-            state.listUsers = [{...action.payload}]; // DEFAULT: [...action.payload] 
+            state.listUsers = [{...action.payload}];
         }
     },
 

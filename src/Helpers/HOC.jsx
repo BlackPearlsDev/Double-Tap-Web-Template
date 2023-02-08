@@ -13,13 +13,17 @@ import { getAll } from "../services/API/user";
 import { loadLadder } from "../store/slices/ladder.slice";
 import { getAllLadder } from "../services/API/ladder";
 
+/********** PLAYERS **********/
+import { loadPlayers } from "../store/slices/players.slice";
+import { getAllPlayers } from "../services/API/players";
+
 function HOC({ child, isAuthRequired, isAdminRequired }) {
     const navigate = useNavigate();
 
     const [fetchError, setFetchError] = useState(false);
     
     const dispatch = useDispatch();
-    const { listUsers, userInfos, isLogged, listLadder } = useSelector((state) => ({...state.user, ...state.users, ...state.ladder}));
+    const { listUsers, userInfos, isLogged, listLadder, listPlayers } = useSelector((state) => ({...state.user, ...state.users, ...state.ladder, ...state.players}));
 
     useEffect(()=>{
         async function checkAuth(){
@@ -85,6 +89,21 @@ function HOC({ child, isAuthRequired, isAdminRequired }) {
         // eslint-disable-next-line
     }, []);
 
+    useEffect(() => {
+        if (!listPlayers.length) {
+            async function fetchData() {
+                const res = await getAllPlayers(userInfos?.account, userInfos?.guid);
+                if (res.status !== 200) {
+                    setFetchError(true);
+                    return;
+                }
+                dispatch(loadPlayers(res.data));
+            }
+            fetchData();
+        }
+        // eslint-disable-next-line
+    }, []);
+
     const Child = child;
 
     if (fetchError) {
@@ -96,7 +115,7 @@ function HOC({ child, isAuthRequired, isAdminRequired }) {
             {!listUsers.length ? (
                  <p className="loadingData">Chargement des données ...</p>
              ) : (
-                    <Child userInfos={userInfos} listUsers={listUsers} ladderInfos={listLadder} />
+                    <Child userInfos={userInfos} listUsers={listUsers} ladderInfos={listLadder} playersInfos={listPlayers}/>
             )}
         </>
     );

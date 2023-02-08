@@ -8,7 +8,7 @@ const ladderSlice = createSlice({
     },
     reducers: {
         loadLadder(state, action) {
-            state.listLadder = [...action.payload]; // DEFAULT: [...action.payload] 
+            state.listLadder = [...action.payload];
         }
     },
 

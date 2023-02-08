@@ -5,11 +5,17 @@ import DofusIcon from '../../../assets/img/dofus_emeraude.png';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@rsuite/icons/Menu';
 import CloseIcon from '@rsuite/icons/Close';
+import { useSelector } from 'react-redux';
 
 function Header() {
 
+    const { isLogged, userInfos } = useSelector((state) => ({ ...state.user }));
+
     const [widthScreen, setWidthScreen] = useState(window.innerWidth);
     const [isToggle, setIsToggle] = useState(false);
+
+    const account = userInfos?.account;
+    const guid = userInfos?.guid;
 
     const ChartIconOpen = ({ size }) => <MenuIcon style={{ fontSize: size, marginRight: 0 }} />;
     const ChartIconClose = ({ size }) => <CloseIcon style={{ fontSize: size, marginRight: 0 }} />;
@@ -26,7 +32,7 @@ function Header() {
         <Link ref={ref} to={href} {...rest}>
           {children}
         </Link>
-      ));
+    ));
 
     return (
         <header>
@@ -37,13 +43,17 @@ function Header() {
                     <Navbar.Brand as={NavLink} href="/">DOUBLE TAP</Navbar.Brand>
 
                     <Nav pullRight>
-                        <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
-                        <Nav.Item as={NavLink} href="/news">Nouveautés</Nav.Item>
-                        <Nav.Item as={NavLink} href="/ladder">Classement</Nav.Item>
+                        <Nav.Item as={NavLink} href="play">Jouer</Nav.Item>
+                        <Nav.Item as={NavLink} href="news">Nouveautés</Nav.Item>
+                        <Nav.Item as={NavLink} href="ladder">Classement</Nav.Item>
                         <Nav.Menu title="Autres">
-                            <Nav.Item as={NavLink} href="/">Support</Nav.Item>
+                            {isLogged ? (
+                            <Nav.Item as={NavLink} href={`account/${account}/${guid}`}>Mon compte</Nav.Item>
+                            ) : (
+                            <Nav.Item as={NavLink} href="login">Connexion</Nav.Item>
+                            )}
                             <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
-                            <Nav.Item as={NavLink} href="/team">Équipe</Nav.Item>
+                            <Nav.Item as={NavLink} href="team">Équipe</Nav.Item>
                         </Nav.Menu>
                     </Nav>
                     </>
@@ -56,15 +66,15 @@ function Header() {
 
                                 <Nav pullRight>
                                     <div>
-                                        <Nav.Item as={NavLink} href="/play">Jouer</Nav.Item>
-                                        <Nav.Item as={NavLink} href="/news">Nouveautés</Nav.Item>
+                                        <Nav.Item as={NavLink} href="play">Jouer</Nav.Item>
+                                        <Nav.Item as={NavLink} href="news">Nouveautés</Nav.Item>
                                     </div>
                                     <div>
-                                        <Nav.Item as={NavLink} href="/ladder">Classement</Nav.Item>
+                                        <Nav.Item as={NavLink} href="ladder">Classement</Nav.Item>
                                         <Nav.Menu title="Autres">
                                             <Nav.Item as={NavLink} href="/">Support</Nav.Item>
                                             <Nav.Item as={NavLink} href="/">Discord</Nav.Item>
-                                            <Nav.Item as={NavLink} href="/team">Équipe</Nav.Item>
+                                            <Nav.Item as={NavLink} href="team">Équipe</Nav.Item>
                                         </Nav.Menu>
                                     </div>
                                 </Nav>

@@ -1,10 +1,12 @@
 export const validate = (inputs) => {
     if (window.location.pathname === "/login") {
-        const inputsSanitized = {
-            pseudo : inputs.pseudo.trim(),
-            password : inputs.password.trim(),
+        if(inputs.username !== ("" || undefined) && inputs.password !== ("" || undefined)) {
+            const inputsSanitized = {
+                username : inputs.username.trim(),
+                password : inputs.password.trim(),
+            }
+            return inputsSanitized;
         }
-        return inputsSanitized;
     }
 
     if (window.location.pathname === "/register") {

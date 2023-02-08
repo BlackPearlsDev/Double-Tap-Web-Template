@@ -4,6 +4,7 @@ export const checkToken = async (token) => {
     try {
         return await axios.get("/api/v1/user/checkToken", { headers : {"x-access-token": token}});
     } catch (error) {
+        console.log("error.response:", error.response);
         return error.response;
     }
 }
@@ -15,6 +16,7 @@ export const register = async (datas) => {
         return error.response;
     }
 }
+
 export const login = async (datas) => {
     try {
         return await axios.post("/api/v1/user/login", datas);

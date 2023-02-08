@@ -283,7 +283,7 @@ nav img {
     text-align: center;
 }
 
-.play-deco, .ladder-deco {
+.play-deco, .ladder-deco, .login-deco {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,6 +294,11 @@ nav img {
 
 .play-deco .image-bg {
     top: 110%;
+    left: 50%;
+}
+
+.login-deco .image-bg {
+    top: 90%;
     left: 50%;
 }
 
@@ -517,7 +522,7 @@ nav img {
     background-color: #1a1d24;
 }
 
-.txt-admin {
+.txt-admin, .txt-yellow {
     color: rgba(255, 255, 0, .8);
 }
 
@@ -586,10 +591,19 @@ nav img {
 
 .form-register {
     margin: 20px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rs-form-help-text-tooltip {
+    font-size: 2rem;
+    color: rgba(255, 255, 0, .7);
+    animation: pulse 1s linear infinite;
 }
 
 .form-register button {
-    margin: 20px auto;
+    /* margin: 20px auto; */
     transition: all .4s ease-in-out;
     font-size: 1.6rem;
 }
@@ -643,6 +657,165 @@ nav img {
 }
 
 /* FIN PAGE SUCCES */
+
+/* PAGE LOGIN */
+
+.login-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.login-infos h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+.login-infos p {
+    font-size: 2rem;
+    color: rgba(235, 235, 245, .6);
+    margin-top: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.form-login {
+    margin: 5% 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FIN PAGE LOGIN */
+
+/* PAGE ACCOUNT */
+
+.account-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account-infos h1 {
+    font-size: 3.2rem;
+    margin-top: 2%;
+}
+
+.account-infos p {
+    font-size: 2rem;
+    color: rgba(235, 235, 245, .6);
+    max-width: 500px;
+    text-align: center;
+    margin: 1%;
+}
+
+.all-details-account-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card-account-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+    margin: 2%;
+    border: 1px solid #1a1d24;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #1a1d24
+}
+
+.account-infos-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.account-infos-card p {
+    font-size: 1.6rem;
+}
+
+.card-players-infos-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 2%;
+}
+
+.card-player {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    transition: all .4s ease-in-out;
+}
+
+.card-player .rs-badge {
+    position: relative;
+    top: 15px;
+    left: -25%;
+    z-index: 000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.card-player img {
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid #1a1d24;
+    box-shadow: 0 0 10px 0 #1a1d24;
+}
+
+.card-player h3 {
+    font-size: 1.8rem;
+    margin-top: 2%;
+}
+
+.card-player p {
+    font-size: 1.6rem;
+    color: rgba(235, 235, 245, .6);
+    margin: 2%;
+}
+
+.card-player:hover {
+    transform: scale(1.05);
+    transition: all .4s ease-in-out;
+}
+
+.btn-logout {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1a1d24;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all .4s ease-in-out;
+    text-decoration: none;
+    margin: 10%;
+}
+
+.btn-logout:hover {
+    text-decoration: none;
+    color: rgba(235, 235, 245, .6);
+    border: 1px solid rgba(255, 255, 0, .7);
+    background-color: #1a1d24;
+    transform: scale(1.02);
+    transition: all .4s ease-in-out;
+}
+
+/* FIN PAGE ACCOUNT */
 
 /* FIN PAGE SERVER DOWN */
 
@@ -905,6 +1078,51 @@ footer {
     }
     
     /* FIN PAGE SUCCES */
+    
+    /* PAGE ACCOUNT */
+
+    .account-infos {
+        text-align: center;
+    }
+
+    .account-infos h1 {
+        margin: 3%;
+        font-size: 2.6rem;
+    }
+
+    .account-infos p {
+        font-size: 1.8rem;
+    }
+
+    .all-details-account-infos {
+        flex-direction: column;
+    }
+
+    .card-account-infos {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .card-players-infos-list {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .card-player {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .card-player h3 {
+        font-size: 2.4rem;
+    }
+
+    .card-player p {
+        font-size: 1.8rem;
+    }
+
+    /* FIN PAGE ACCOUNT */
 }
 
 /* dimensions special entre telephone large et tablette */
@@ -1071,6 +1289,51 @@ footer {
     }
 
     /* FIN PAGE SUCCES */
+
+    /* PAGE LOGIN */
+
+    .login-deco .image-bg {
+        top: 75%;
+        left: 50%;
+    }
+
+    /* FIN PAGE LOGIN */
+
+    /* PAGE ACCOUNT */
+
+    .account-infos {
+        text-align: center;
+    }
+
+    .all-details-account-infos {
+        flex-direction: column;
+    }
+
+    .card-account-infos {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .card-players-infos-list {
+        flex-direction: row;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .card-player {
+        width: 45%;
+        margin: 10px 0 10px 0;
+    }
+
+    .card-player h3 {
+        font-size: 2.4rem;
+    }
+
+    .card-player p {
+        font-size: 1.8rem;
+    }
+
+    /* FIN PAGE ACCOUNT */
 }
 
 /* laptop et ecran moyen */
@@ -1082,5 +1345,18 @@ footer {
 
     .card {
         height: 280px;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }

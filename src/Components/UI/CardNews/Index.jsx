@@ -1,5 +1,3 @@
-import React from 'react'
-
 function CardNews(props) {
     return (
         <div className='card-news'>
@@ -11,4 +9,4 @@ function CardNews(props) {
     )
 }
 
-export default CardNews
+export default CardNews;
