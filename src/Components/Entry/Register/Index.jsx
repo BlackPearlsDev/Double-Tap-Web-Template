@@ -1,23 +1,27 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'rsuite';
 import { useNavigate } from 'react-router-dom';
 import { validate } from "../../../Helpers/sanitize";
 import { register } from "../../../services/API/user";
+import { Form, ButtonToolbar, Button } from 'rsuite';
 
 function Register() {
+
+    const [errorVisible, setErrorVisible] = useState(false);
+    const [userExist, setUserExist] = useState(false);
+    const [toShort, setToShort] = useState(false);
+    const [errorPlacement] = useState('rightStart');
+    const errorMessage = errorVisible ? 'Saisie obligatoire' : userExist ? "Utilisateur éxistant" : toShort ? "Mot de passe trop court" : null;
 
     const navigate = useNavigate();
 
     const [inputs, setInputs] = useState({ username: "", secretKey : "", password: "", passwordConfirm: ""});
-    const [empty, setEmpty] = useState(false);
-    const [userExist, setUserExist] = useState(false);
 
     const handleRegister = async (e) => {
         e.preventDefault();
         const inputsValidation = validate(inputs);
         if (inputs.username === "" || inputs.secretKey === "" || inputs.password === "" || inputs.passwordConfirm === "") {
-            setEmpty(true);
-            return;
+            setErrorVisible(true);
         }
         if(inputsValidation === true) {
             if (inputs.password === inputs.passwordConfirm) {
@@ -27,12 +31,28 @@ function Register() {
                     return;
                 } else {
                     navigate("/success");
+                    const checkInscription = localStorage.getItem("checkInscription");
+                    if (checkInscription === null) {
+                        localStorage.setItem("checkInscription", true);
+                    }
                 }
-            } else {
-                setEmpty(true);
             }
+        } else if (inputsValidation === "toShort") {
+            setToShort(true);
+        } else {
+            setErrorVisible(true);
         }
     }
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setErrorVisible(false);
+            setUserExist(false);
+            setToShort(false);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, [errorVisible, userExist, toShort]);
 
     return (
         <main>
@@ -43,24 +63,33 @@ function Register() {
                 </article>
 
                 <aside className='register-note'>
-                        <h1>NOTE</h1>
-                        <p>Toutes vos données sont hashées et sécurisées, ne les communiquez à personnes sous aucun prétexte.</p>
-                        <p>Si vous perdez votre mot de passe, il vous sera demandé via le support votre clé secrète pour vérifier vos données pour la récupération de compte.</p>
+                    <h1>NOTE</h1>
+                    <p>Toutes vos données sont hashées et sécurisées, ne les communiquez à personnes sous aucun prétexte.</p>
+                    <p>Si vous perdez votre mot de passe, il vous sera demandé via le support votre clé secrète pour vérifier vos données pour la récupération de compte.</p>
                 </aside>
 
-                <form onSubmit={handleRegister}  className='form-register'>
-                    <input type="text" id="username" name="username" placeholder="Nom de compte" onChange={(e) => setInputs({...inputs, username: e.target.value})}/>
+                <Form layout="horizontal" onChange={(formValue) => setInputs(formValue)} className='form-register'>
+                    <Form.Group controlId="username">
+                        <Form.Control name="username" placeholder='Nom de compte' errorMessage={errorMessage} errorPlacement={errorPlacement}/>
+                    </Form.Group>
 
-                    <input type="text" id="secretKey" name="secretKey" placeholder="Clé secrète (8 caractères minimums)" onChange={(e) => setInputs({...inputs, secretKey: e.target.value})}/>
+                    <Form.Group controlId="secretKey">
+                        <Form.Control name="secretKey" placeholder='Clé secrète (8 caractères minimum)' errorMessage={errorMessage} errorPlacement={errorPlacement}/>
+                        <Form.HelpText tooltip>Vous pouvez mettre ce que vous voulez. Gardez là bien elle vous sera demandée en cas de récupération de mot de passe.</Form.HelpText>
+                    </Form.Group>
 
-                    <input type="password" id="password" name="password" placeholder="Mot de passe (8 caractères minimums)" onChange={(e) => setInputs({...inputs, password: e.target.value})}/>
+                    <Form.Group controlId="password">
+                        <Form.Control name="password" placeholder='Mot de passe (8 caractères minimum)' errorMessage={errorMessage} errorPlacement={errorPlacement} type='password'/>
+                    </Form.Group>
 
-                    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmer le mot de passe" onChange={(e) => setInputs({...inputs, passwordConfirm: e.target.value})}/>
+                    <Form.Group controlId="passwordConfirm">
+                        <Form.Control name="passwordConfirm" placeholder='Confirmation mot de passe' errorMessage={errorMessage} errorPlacement={errorPlacement} type='password'/>
+                    </Form.Group>
 
-                    <input type="submit" value="S'inscrire" />
-                </form>
-                {empty && <p className='txtErrorEntry'>Veuillez remplir tous les champs</p>}
-                {userExist && <p className='txtErrorEntry'>Ce nom de compte existe déjà</p>}
+                    <ButtonToolbar>
+                        <Button appearance="primary" onClick={handleRegister}>S'inscrire</Button>
+                    </ButtonToolbar>
+                </Form>
             </Container>
         </main>
     )

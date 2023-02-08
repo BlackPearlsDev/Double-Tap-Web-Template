@@ -3,6 +3,7 @@ import { Container } from 'rsuite';
 import { Link } from 'react-router-dom';
 import ImgWelcome from '../../../assets/img/welcome.png';
 import { Notification, Placeholder, useToaster } from 'rsuite';
+import { useNavigate } from 'react-router-dom';
 
 const Message = React.forwardRef(({ type, ...rest }, ref) => {
     return (
@@ -16,12 +17,23 @@ const Message = React.forwardRef(({ type, ...rest }, ref) => {
 function Succes() {
 
     const toaster = useToaster();
+    const navigate = useNavigate();
+
+    const checkInscription = localStorage.getItem("checkInscription");
 
     useEffect(() => {
-        toaster.push(<Message></Message>, {
-            placement: 'topEnd'
-        });
+        if (checkInscription !== null) {
+            toaster.push(<Message></Message>, {
+                placement: 'topEnd'
+            });
+        } else {
+            navigate("/");
+        }
     });
+
+    const handleBackHome = () => {
+        localStorage.removeItem("checkInscription");
+    }
 
     return (
         <main>
@@ -29,7 +41,7 @@ function Succes() {
                 <h1>Vous voilà prêt !</h1>
                 <p>Vous êtes maintenant prêt à rejoindre Double Tap. Nous vous souhaitons une agréable aventure, terrassez tout ce que vous pouvez et amusez-vous bien.</p>
                 <img src={ImgWelcome} alt='Dofus Rétro, le MMORPG français édité par Ankama Games.' />
-                <Link to="/" className='back-home-btn'>Retour à l'accueil</Link>
+                <Link to='/' onClick={handleBackHome}><button className='back-home-btn'>Retour à l'accueil</button></Link>
             </Container>
         </main>
     )
