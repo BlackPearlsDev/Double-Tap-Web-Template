@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { Container, Tooltip, Whisper, Modal, Button } from 'rsuite';
 import CardPlayer from '../../UI/CardPlayer/Index';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loadPlayers } from '../../../store/slices/players.slice';
 import { getAllPlayers } from '../../../services/API/players';
+import { Input, InputGroup } from 'rsuite';
+import EyeIcon from '@rsuite/icons/legacy/Eye';
+import EyeSlashIcon from '@rsuite/icons/legacy/EyeSlash';
 
 // Import classes images
 import ImgAccount from '../../../assets/img/account-placeholder.png';
@@ -22,9 +24,9 @@ import ImgSadida from '../../../assets/classes/sadida.png';
 import ImgSram from '../../../assets/classes/sram.png';
 import ImgXelor from '../../../assets/classes/xelor.png';
 
+
 function Account({userInfos, playersInfos}) {
 
-    const navigate = useNavigate();
     const dispatch = useDispatch();
     const lastConnection = userInfos?.lastConnectionDate.replace(/[~]/g,'/').substring(0, 10);
 
@@ -33,6 +35,12 @@ function Account({userInfos, playersInfos}) {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const [modalContent, setModalContent] = useState(null);
+
+    const [visible, setVisible] = useState(false);
+
+    const handleChange = () => {
+      setVisible(!visible);
+    };
 
     const tooltip = (
         <Tooltip>
@@ -46,7 +54,16 @@ function Account({userInfos, playersInfos}) {
 
     useEffect(() => {
         if (playersInfos?.length === 0) {
-            navigate("/");
+            // no data, so fetch it
+            async function fetchData() {
+                const res = await getAllPlayers(userInfos?.account, userInfos?.guid);
+                if (res.status !== 200) {
+                    console.log('EROOR. Please contact the administrator.');
+                    return;
+                }
+                dispatch(loadPlayers(res.data));
+            }
+            fetchData();
         }
         // eslint-disable-next-line
     }, []);
@@ -63,7 +80,7 @@ function Account({userInfos, playersInfos}) {
                     dispatch(loadPlayers(res.data));
                 }
                 fetchData();
-            }, 10000); // envoi de la requête toutes les 10 secondes pour pas surcharger le serveur
+            }, 5000); // envoi de la requête toutes les 5 secondes pour pas surcharger le serveur
             return () => clearInterval(interval);
         }
         // eslint-disable-next-line
@@ -97,6 +114,14 @@ function Account({userInfos, playersInfos}) {
                         <Whisper placement="top" controlId="control-id-hover" trigger="hover" speaker={tooltip}>
                             <p>Nombre de personnages: <strong className='txt-yellow'>{playersInfos?.length}</strong></p>
                         </Whisper>
+                        <p>VIP: <strong className='txt-yellow'>{userInfos?.vip === 1 ? 'Oui' : 'Non'}</strong></p>
+                        <p>Votre clé secrète</p>
+                        <InputGroup inside style={{width: 200}}>
+                            <Input type={visible ? 'text' : 'password'} value={userInfos?.email !== null ? userInfos?.email : 'Aucune clé'} disabled />
+                            <InputGroup.Button onClick={handleChange}>
+                                {visible ? <EyeIcon /> : <EyeSlashIcon />}
+                            </InputGroup.Button>
+                        </InputGroup>
                         <Link to="/logout" className='btn-logout'>Déconnexion</Link>
                     </div>
                 </article>

@@ -17,8 +17,6 @@ function Register() {
 
     const [inputs, setInputs] = useState({ username: "", secretKey : "", password: "", passwordConfirm: ""});
 
-    console.log("inputs:", inputs);
-
     const handleRegister = async (e) => {
         e.preventDefault();
         const inputsValidation = validate(inputs);
