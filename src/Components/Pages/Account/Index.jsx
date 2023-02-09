@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loadPlayers } from '../../../store/slices/players.slice';
 import { getAllPlayers } from '../../../services/API/players';
-import { Input, InputGroup } from 'rsuite';
+import { Input, InputGroup, Panel, Row, Col } from 'rsuite';
 import EyeIcon from '@rsuite/icons/legacy/Eye';
 import EyeSlashIcon from '@rsuite/icons/legacy/EyeSlash';
 
@@ -23,6 +23,38 @@ import ImgSacrieur from '../../../assets/classes/sacrieur.png';
 import ImgSadida from '../../../assets/classes/sadida.png';
 import ImgSram from '../../../assets/classes/sram.png';
 import ImgXelor from '../../../assets/classes/xelor.png';
+
+// Import jobs images
+import ImgJobAlchimiste from '../../../assets/jobs/alchimiste.jpg';
+import ImgJobBijoutier from '../../../assets/jobs/bijoutier.jpg';
+import ImgJobBricoleur from '../../../assets/jobs/bricoleur.jpg';
+import ImgJobBucheron from '../../../assets/jobs/bucheron.jpg';
+import ImgJobChasseur from '../../../assets/jobs/chasseur.jpg';
+import ImgJobCordomage from '../../../assets/jobs/cordomage.jpg';
+import ImgJobCordonnier from '../../../assets/jobs/cordonnier.jpg';
+import ImgJobCostumage from '../../../assets/jobs/costumage.jpg';
+import ImgJobForgemageDagues from '../../../assets/jobs/forgemage_dagues.jpg';
+import ImgJobForgemageEpees from '../../../assets/jobs/forgemage_epees.jpg';
+import ImgJobForgemageHaches from '../../../assets/jobs/forgemage_haches.jpg';
+import ImgJobForgemageMarteaux from '../../../assets/jobs/forgemage_marteaux.jpg';
+import ImgJobForgemagePelles from '../../../assets/jobs/forgemage_pelles.jpg';
+import ImgJobForgeurBouclier from '../../../assets/jobs/forgeur_bouclier.jpg';
+import ImgJobForgeurDagues from '../../../assets/jobs/forgeur_dagues.jpg';
+import ImgJobForgeurEpees from '../../../assets/jobs/forgeur_epees.jpg';
+import ImgJobForgeurHaches from '../../../assets/jobs/forgeur_haches.jpg';
+import ImgJobForgeurMarteaux from '../../../assets/jobs/forgeur_marteaux.jpg';
+import ImgJobForgeurPelles from '../../../assets/jobs/forgeur_pelles.jpg';
+import ImgJobJoaillomage from '../../../assets/jobs/joaillomage.jpg';
+import ImgJobMineur from '../../../assets/jobs/mineur.jpg';
+import ImgJobPaysan from '../../../assets/jobs/paysan.jpg';
+import ImgJobPecheur from '../../../assets/jobs/pecheur.jpg';
+import ImgJobSculptemageArcs from '../../../assets/jobs/sculptemage_arcs.jpg';
+import ImgJobSculptemageBaguettes from '../../../assets/jobs/sculptemage_baguettes.jpg';
+import ImgJobSculptemageBatons from '../../../assets/jobs/sculptemage_batons.jpg';
+import ImbJobSculpteurArcs from '../../../assets/jobs/sculpteur_arcs.jpg';
+import ImgJobSculpteurBaguettes from '../../../assets/jobs/sculpteur_baguettes.jpg';
+import ImgJobSculpteurBatons from '../../../assets/jobs/sculpteur_batons.jpg';
+import ImgJobTailleur from '../../../assets/jobs/tailleur.jpg';
 
 
 function Account({userInfos, playersInfos}) {
@@ -51,6 +83,32 @@ function Account({userInfos, playersInfos}) {
             })}</p>
         </Tooltip>
     );
+
+    const tooltipJob = (
+        <Tooltip>
+            <p>{modalContent?.jobs !== '' ? modalContent?.jobs.split(";").map((job, index) => {
+                return (
+                    <span key={index}>
+                        {job.split(",")[0] === "2" ? 'Bucheron' : job.split(",")[0] === "11" ? 'Forgeur d\'épées' : job.split(",")[0] === "13" ? 'Sculpteur d\'arcs' : job.split(",")[0] === "14" ? 'Forgeur de marteaux' : job.split(",")[0] === "15" ? 'Cordonnier' : job.split(",")[0] === "16" ? 'Bijoutier' : job.split(",")[0] === "17" ? 'Forgeur de Dagues' : job.split(",")[0] === "18" ? 'Sculpteur de Batons' : job.split(",")[0] === "19" ? 'Sculpteur de Baguettes' : job.split(",")[0] === "20" ? 'Forgeur de Pelles' : job.split(",")[0] === "24" ? 'Mineur' : job.split(",")[0] === "25" ? 'Boulanger' : job.split(",")[0] === "26" ? 'Alchimiste' : job.split(",")[0] === "27" ? 'Tailleur' : job.split(",")[0] === "28" ? 'Paysan' : job.split(",")[0] === "31" ? 'Forgeur de Haches' : job.split(",")[0] === "36" ? 'Pecheur' : job.split(",")[0] === "41" ? 'Chasseur' : job.split(",")[0] === "43" ? 'Forgemage de Dagues' : job.split(",")[0] === "44" ? 'Forgemage d\'épées' : job.split(",")[0] === "45" ? 'Forgemage de Marteaux' : job.split(",")[0] === "46" ? 'Forgemage de Pelles' : job.split(",")[0] === "47" ? 'Forgemage de Haches' : job.split(",")[0] === "48" ? 'Sculptemage d\'Arcs' : job.split(",")[0] === "49" ? 'Sculptemage de Baguettes' : job.split(",")[0] === "50" ? 'Sculptemage de Batons' : job.split(",")[0] === "56" ? 'Boucher' : job.split(",")[0] === "58" ? 'Poissonnier' : job.split(",")[0] === "60" ? 'Forgeur de Boucliers' : job.split(",")[0] === "62" ? 'Cordomage' : job.split(",")[0] === "63" ? 'Joaillomage' : job.split(",")[0] === "64" ? 'Costumage' : job.split(",")[0] === "65" ? 'Bricoleur' : null}
+                        <strong className='txt-yellow'> | </strong> {job.split(",")[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} XP<br /> </span>
+                )
+            }) : 'Aucun métier'}</p>
+        </Tooltip>
+    );
+
+    const Card = props => (
+        <Whisper placement="top" controlId="control-id-hover" trigger="hover" speaker={tooltipJob}>
+            <Panel {...props} bordered header={props.title} className={modalContent?.jobs === '' ? 'card-no-job' : ''}>
+                {modalContent?.jobs !== '' ? modalContent?.jobs.split(";").map((job, index) => {
+                    return (
+                        <span key={index}>
+                            {job.split(",")[0] === "2" ? <img src={ImgJobBucheron} alt="" /> : job.split(",")[0] === "11" ? <img src={ImgJobForgeurEpees} alt="" /> : job.split(",")[0] === "13" ? <img src={ImbJobSculpteurArcs} alt="" /> : job.split(",")[0] === "14" ? <img src={ImgJobForgeurMarteaux} alt="" /> : job.split(",")[0] === "15" ? <img src={ImgJobCordonnier} alt="" /> : job.split(",")[0] === "16" ? <img src={ImgJobBijoutier} alt="" /> : job.split(",")[0] === "17" ? <img src={ImgJobForgeurDagues} alt="" /> : job.split(",")[0] === "18" ? <img src={ImgJobSculpteurBatons} alt="" /> : job.split(",")[0] === "19" ? <img src={ImgJobSculpteurBaguettes} alt="" /> : job.split(",")[0] === "20" ? <img src={ImgJobForgeurPelles} alt="" /> : job.split(",")[0] === "24" ? <img src={ImgJobMineur} alt="" /> : job.split(",")[0] === "25" ? <img src={ImgJobPaysan} alt="" /> : job.split(",")[0] === "26" ? <img src={ImgJobAlchimiste} alt="" /> : job.split(",")[0] === "27" ? <img src={ImgJobTailleur} alt="" /> : job.split(",")[0] === "28" ? <img src={ImgJobPaysan} alt="" /> : job.split(",")[0] === "31" ? <img src={ImgJobForgeurHaches} alt="" /> : job.split(",")[0] === "36" ? <img src={ImgJobPecheur} alt="" /> : job.split(",")[0] === "41" ? <img src={ImgJobChasseur} alt="" /> : job.split(",")[0] === "43" ? <img src={ImgJobForgemageDagues} alt="" /> : job.split(",")[0] === "44" ? <img src={ImgJobForgemageEpees} alt="" /> : job.split(",")[0] === "45" ? <img src={ImgJobForgemageMarteaux} alt="" /> : job.split(",")[0] === "46" ? <img src={ImgJobForgemagePelles} alt="" /> : job.split(",")[0] === "47" ? <img src={ImgJobForgemageHaches} alt="" /> : job.split(",")[0] === "48" ? <img src={ImgJobSculptemageArcs} alt="" /> : job.split(",")[0] === "49" ? <img src={ImgJobSculptemageBaguettes} alt="" /> : job.split(",")[0] === "50" ? <img src={ImgJobSculptemageBatons} alt="" /> : job.split(",")[0] === "56" ? <img src={ImgJobChasseur} alt="" /> : job.split(",")[0] === "58" ? <img src={ImgJobPecheur} alt="" /> : job.split(",")[0] === "60" ? <img src={ImgJobForgeurBouclier} alt="" /> : job.split(",")[0] === "62" ? <img src={ImgJobCordomage} alt="" /> : job.split(",")[0] === "63" ? <img src={ImgJobJoaillomage} alt="" /> : job.split(",")[0] === "64" ? <img src={ImgJobCostumage} alt="" /> : job.split(",")[0] === "65" ? <img src={ImgJobBricoleur} alt="" /> : null}
+                        </span>
+                    )
+                }) : <span>Aucun métier</span>}
+            </Panel>
+        </Whisper>
+      );
 
     useEffect(() => {
         if (playersInfos?.length === 0) {
@@ -161,14 +219,19 @@ function Account({userInfos, playersInfos}) {
                     <p>Points d'honneur: <span className='txt-yellow'>{modalContent?.honor}</span></p>
                     <p>Points de déshonneur: <span className='txt-yellow'>{modalContent?.deshonor}</span></p>
                     <h3>Artisanat</h3>
-                    <p>Métiers | {modalContent?.jobs !== '' && modalContent?.jobs.split(";").map((job, index) => {
+                    {/* <p>Métiers | {modalContent?.jobs !== '' && modalContent?.jobs.split(";").map((job, index) => {
                         return (
                             <span key={index}>
                                 {job.split(",")[0] === "2" ? <span className="txt-yellow">Bûcheron:</span> : job.split(",")[0] === "11" ? <span className="txt-yellow">Forgeur d'Epées:</span> : job.split(",")[0] === "13" ? <span className="txt-yellow">Sculpteur d'Arcs:</span> : job.split(",")[0] === "14" ? <span className="txt-yellow">Forgeur de Marteaux:</span> : job.split(",")[0] === "15" ? <span className="txt-yellow">Cordonnier:</span> : job.split(",")[0] === "16" ? <span className="txt-yellow">Bijoutier:</span> : job.split(",")[0] === "17" ? <span className="txt-yellow">Forgeur de Dagues:</span> : job.split(",")[0] === "18" ? <span className="txt-yellow">Sculpteur de Bâtons:</span> : job.split(",")[0] === "19" ? <span className="txt-yellow">Sculpteur de Baguettes:</span> : job.split(",")[0] === "20" ? <span className="txt-yellow">Forgeur de Pelles:</span> : job.split(",")[0] === "24" ? <span className="txt-yellow">Mineur:</span> : job.split(",")[0] === "25" ? <span className="txt-yellow">Boulanger:</span> : job.split(",")[0] === "26" ? <span className="txt-yellow">Alchimiste:</span> : job.split(",")[0] === "27" ? <span className="txt-yellow">Tailleur:</span> : job.split(",")[0] === "28" ? <span className="txt-yellow">Paysan:</span> : job.split(",")[0] === "31" ? <span className="txt-yellow">Forgeur de Haches:</span> : job.split(",")[0] === "36" ? <span className="txt-yellow">Pêcheur:</span> : job.split(",")[0] === "41" ? <span className="txt-yellow">Chasseur:</span> : job.split(",")[0] === "43" ? <span className="txt-yellow">Forgemage de Dagues:</span> : job.split(",")[0] === "44" ? <span className="txt-yellow">Forchemage d'Epées:</span> : job.split(",")[0] === "45" ? <span className="txt-yellow">Forgemage de Marteaux:</span> : job.split(",")[0] === "46" ? <span className="txt-yellow">Forgemage de Pelles:</span> : job.split(",")[0] === "47" ? <span className="txt-yellow">Forgemage de Haches:</span> : job.split(",")[0] === "48" ? <span className="txt-yellow">Sculptomage d'Arcs:</span> : job.split(",")[0] === "49" ? <span className="txt-yellow">Sculptomage de Baguettes:</span> : job.split(",")[0] === "50" ? <span className="txt-yellow">Sculptomage de Bâtons:</span> : job.split(",")[0] === "56" ? <span className="txt-yellow">Boucher:</span> : job.split(",")[0] === "58" ? <span className="txt-yellow">Poissonnier:</span> : job.split(",")[0] === "60" ? <span className="txt-yellow">Forgeur de Boucliers:</span> : job.split(",")[0] === "62" ? <span className="txt-yellow">Cordomage:</span> : job.split(",")[0] === "63" ? <span className="txt-yellow">Joaillomage:</span> : job.split(",")[0] === "64" ? <span className="txt-yellow">Costumage:</span> : job.split(",")[0] === "65" ? <span className="txt-yellow">Bricoleur:</span> : null} {job.split(",")[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " XP |"}
                                 {"\n"}
                             </span>
                         )
-                    })}</p>
+                    })}</p> */}
+                    <Row>
+                        <Col md={8} sm={12} className={modalContent?.jobs === '' ? 'col-no-jobs' : ''}>
+                            <Card />
+                        </Col>
+                    </Row>
                     <h3>Autres</h3>
                     <p>Sexe: {modalContent?.sexe === 0 ? <span className='txt-yellow'>Mâle</span> : <span className='txt-yellow'>Femelle</span>}</p>
                     <p>Spécialisation: {modalContent?.specialisation === 1 ? <span className='txt-yellow'>Tank</span> : modalContent?.specialisation === 2 ? <span className='txt-yellow'>Heal</span> : modalContent?.specialisation === 3 ? <span className='txt-yellow'>DPS</span> : modalContent?.specialisation === 4 ? <span className='txt-yellow'>Mercenaire</span> : modalContent?.specialisation === 5 ? <span className='txt-yellow'>Explorateur</span> : modalContent?.specialisation === 6 ? <span className='txt-yellow'>Chercheur de Trésor</span> : null}</p>

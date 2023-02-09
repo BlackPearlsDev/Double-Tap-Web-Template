@@ -823,6 +823,59 @@ nav img {
     transition: all .4s ease-in-out;
 }
 
+.rs-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.rs-row .rs-col {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.rs-row .rs-panel-body {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.rs-row img {
+    width: 90px;
+    height: 90px;
+}
+
+.card-no-job {
+    border: transparent;
+    text-align: center;
+}
+
+.col-no-jobs {
+    display: block !important;
+}
+
+.rs-modal-header h4 {
+    font-size: 3.2rem;
+}
+
+.rs-modal-body h3 {
+    font-size: 2.8rem;
+    margin-top: 2%;
+}
+
+.rs-modal-body p {
+    font-size: 1.8rem;
+}
+
+.rs-tooltip {
+    font-size: 1.6rem;
+    width: 100%;
+}
+
 /* FIN PAGE ACCOUNT */
 
 /* FIN PAGE SERVER DOWN */
@@ -1128,6 +1181,11 @@ footer {
 
     .card-player p {
         font-size: 1.8rem;
+    }
+
+    .rs-row img {
+        width: 40px;
+        height: 40px;
     }
 
     /* FIN PAGE ACCOUNT */
