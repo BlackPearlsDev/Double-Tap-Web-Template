@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Double-Tap-Web-Template/static/css/main.f38fd698.css",
-    "main.js": "/Double-Tap-Web-Template/static/js/main.0915d5a6.js",
+    "main.css": "/Double-Tap-Web-Template/static/css/main.0c13ccab.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.ce6cbf78.js",
     "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.9a170870d5f1c22239c3.jpg",
     "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
     "static/media/news-4.jpg": "/Double-Tap-Web-Template/static/media/news-4.18601e0e52d24c5192ba.jpg",
@@ -26,12 +26,14 @@
     "static/media/ecaflip.png": "/Double-Tap-Web-Template/static/media/ecaflip.83cfe7e801280ab4f163.png",
     "static/media/xelor.png": "/Double-Tap-Web-Template/static/media/xelor.67df9c1f56fae5196bf2.png",
     "static/media/icon_amalia.png": "/Double-Tap-Web-Template/static/media/icon_amalia.db4ce645c8422fac32ae.png",
+    "static/media/bucheron.jpg": "/Double-Tap-Web-Template/static/media/bucheron.e8b6eee9a7da3d7e0722.jpg",
+    "static/media/cordomage.jpg": "/Double-Tap-Web-Template/static/media/cordomage.e516d1f70f3ed94e9ea9.jpg",
     "index.html": "/Double-Tap-Web-Template/index.html",
-    "main.f38fd698.css.map": "/Double-Tap-Web-Template/static/css/main.f38fd698.css.map",
-    "main.0915d5a6.js.map": "/Double-Tap-Web-Template/static/js/main.0915d5a6.js.map"
+    "main.0c13ccab.css.map": "/Double-Tap-Web-Template/static/css/main.0c13ccab.css.map",
+    "main.ce6cbf78.js.map": "/Double-Tap-Web-Template/static/js/main.ce6cbf78.js.map"
   },
   "entrypoints": [
-    "static/css/main.f38fd698.css",
-    "static/js/main.0915d5a6.js"
+    "static/css/main.0c13ccab.css",
+    "static/js/main.ce6cbf78.js"
   ]
 }
