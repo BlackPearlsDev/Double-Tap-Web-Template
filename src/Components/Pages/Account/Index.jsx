@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
 import { Container } from 'rsuite';
 import CardPlayer from '../../UI/CardPlayer/Index';
 import { Link } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
-// import { getAllPlayers } from '../../../services/API/players';
-// import { loadPlayers } from '../../../store/slices/players.slice';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { loadPlayers } from '../../../store/slices/players.slice';
+import { getAllPlayers } from '../../../services/API/players';
 
 // Import classes images
 import ImgAccount from '../../../assets/img/account-placeholder.png';
@@ -21,23 +23,35 @@ import ImgSram from '../../../assets/classes/sram.png';
 import ImgXelor from '../../../assets/classes/xelor.png';
 
 function Account({userInfos, playersInfos}) {
-
+    
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const lastConnection = userInfos?.lastConnectionDate.replace(/[~]/g,'/').substring(0, 10);
-    
-    
-    // For next update maybe..
-    
-    // const dispatch = useDispatch();
-    // const refresh = async () => {
-    //     console.log("refresh");
-    //     async function fetchPlayers() {
-    //         const res = await getAllPlayers();
-    //         if(res.status === 200) {
-    //             dispatch(loadPlayers(res.data.result));
-    //         }
-    //     }
-    //     fetchPlayers();
-    // }
+
+    useEffect(() => {
+        if (playersInfos?.length === 0) {
+            navigate("/");
+        }
+        // eslint-disable-next-line
+    }, []);
+
+    useEffect(() => {
+        if (playersInfos?.length !== 0) {
+            const interval = setInterval(() => {
+                async function fetchData() {
+                    const res = await getAllPlayers(userInfos?.account, userInfos?.guid);
+                    if (res.status !== 200) {
+                        console.log('error');
+                        return;
+                    }
+                    dispatch(loadPlayers(res.data));
+                }
+                fetchData();
+            }, 10000); // envoi de la requête toutes les 10 secondes pour pas surcharger le serveur
+            return () => clearInterval(interval);
+        }
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <main>
@@ -59,8 +73,8 @@ function Account({userInfos, playersInfos}) {
                 </article>
 
                 <div className='card-players-infos-list'>
-                    {playersInfos?.length === 0 ? <p className='txt-center'>Vous n'avez pas encore créé de personnage.</p> : null}
-                    {playersInfos?.map((player, index) => {
+                    {playersInfos?.length === 0 ? <p className='txt-center'>Vous n'avez pas encore créé de personnage.</p> :
+                    playersInfos.map((player, index) => {
                         return (
                             <CardPlayer
                                 key={index}

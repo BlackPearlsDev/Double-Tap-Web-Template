@@ -26,6 +26,9 @@ function Succes() {
             toaster.push(<Message></Message>, {
                 placement: 'topEnd'
             });
+            if(checkInscription === "true") {
+                localStorage.removeItem("checkInscription");
+            }
         } else {
             navigate("/");
         }
