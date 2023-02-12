@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Double-Tap-Web-Template/static/css/main.0c13ccab.css",
-    "main.js": "/Double-Tap-Web-Template/static/js/main.ce6cbf78.js",
-    "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.9a170870d5f1c22239c3.jpg",
+    "main.css": "/Double-Tap-Web-Template/static/css/main.4a432868.css",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.2d07688e.js",
+    "static/media/news-1.jpg": "/Double-Tap-Web-Template/static/media/news-1.11439e95ee85543e4bc9.jpg",
     "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
-    "static/media/news-4.jpg": "/Double-Tap-Web-Template/static/media/news-4.18601e0e52d24c5192ba.jpg",
+    "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.18601e0e52d24c5192ba.jpg",
     "static/media/welcome.png": "/Double-Tap-Web-Template/static/media/welcome.821d8ed6e81c023eb060.png",
-    "static/media/news-2.jpg": "/Double-Tap-Web-Template/static/media/news-2.acdd3f28e666ecb60307.jpg",
-    "static/media/news-1.jpg": "/Double-Tap-Web-Template/static/media/news-1.40d4a206d7e403c2811b.jpg",
+    "static/media/news-4.jpg": "/Double-Tap-Web-Template/static/media/news-4.40d4a206d7e403c2811b.jpg",
     "static/media/maintenance.jpg": "/Double-Tap-Web-Template/static/media/maintenance.7020c47cd2108a34c2bc.jpg",
+    "static/media/news-2.jpg": "/Double-Tap-Web-Template/static/media/news-2.db07e37692b17ffeee72.jpg",
     "static/media/dark-sword.png": "/Double-Tap-Web-Template/static/media/dark-sword.87071beb44f598f38920.png",
     "static/media/account-placeholder.png": "/Double-Tap-Web-Template/static/media/account-placeholder.7d6fcf5c7cf781f35818.png",
     "static/media/icon_zaap.png": "/Double-Tap-Web-Template/static/media/icon_zaap.4ec9004b2343365f220b.png",
@@ -29,11 +29,11 @@
     "static/media/bucheron.jpg": "/Double-Tap-Web-Template/static/media/bucheron.e8b6eee9a7da3d7e0722.jpg",
     "static/media/cordomage.jpg": "/Double-Tap-Web-Template/static/media/cordomage.e516d1f70f3ed94e9ea9.jpg",
     "index.html": "/Double-Tap-Web-Template/index.html",
-    "main.0c13ccab.css.map": "/Double-Tap-Web-Template/static/css/main.0c13ccab.css.map",
-    "main.ce6cbf78.js.map": "/Double-Tap-Web-Template/static/js/main.ce6cbf78.js.map"
+    "main.4a432868.css.map": "/Double-Tap-Web-Template/static/css/main.4a432868.css.map",
+    "main.2d07688e.js.map": "/Double-Tap-Web-Template/static/js/main.2d07688e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c13ccab.css",
-    "static/js/main.ce6cbf78.js"
+    "static/css/main.4a432868.css",
+    "static/js/main.2d07688e.js"
   ]
 }
