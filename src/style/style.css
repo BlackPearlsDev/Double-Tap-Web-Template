@@ -817,7 +817,6 @@ nav img {
 .btn-logout:hover {
     text-decoration: none;
     color: rgba(235, 235, 245, .6);
-    border: 1px solid rgba(255, 255, 0, .7);
     background-color: #1a1d24;
     transform: scale(1.02);
     transition: all .4s ease-in-out;
@@ -874,6 +873,13 @@ nav img {
 .rs-tooltip {
     font-size: 1.6rem;
     width: 100%;
+}
+
+.show-player-success img {
+    width: 50%;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    box-shadow: none;
 }
 
 /* FIN PAGE ACCOUNT */

@@ -56,7 +56,6 @@ import ImgJobSculpteurBaguettes from '../../../assets/jobs/sculpteur_baguettes.j
 import ImgJobSculpteurBatons from '../../../assets/jobs/sculpteur_batons.jpg';
 import ImgJobTailleur from '../../../assets/jobs/tailleur.jpg';
 
-
 function Account({userInfos, playersInfos}) {
 
     const dispatch = useDispatch();
@@ -111,28 +110,12 @@ function Account({userInfos, playersInfos}) {
       );
 
     useEffect(() => {
-        if (playersInfos?.length === 0) {
-            // no data, so fetch it
-            async function fetchData() {
-                const res = await getAllPlayers(userInfos?.account, userInfos?.guid);
-                if (res.status !== 200) {
-                    console.log('EROOR. Please contact the administrator.');
-                    return;
-                }
-                dispatch(loadPlayers(res.data));
-            }
-            fetchData();
-        }
-        // eslint-disable-next-line
-    }, []);
-
-    useEffect(() => {
         if (playersInfos?.length !== 0 ) {
             const interval = setInterval(() => {
                 async function fetchData() {
                     const res = await getAllPlayers(userInfos?.account, userInfos?.guid);
                     if (res.status !== 200) {
-                        console.log('EROOR. Please contact the administrator.');
+                        console.error('ERROR. Please contact the administrator.');
                         return;
                     }
                     dispatch(loadPlayers(res.data));
@@ -140,6 +123,16 @@ function Account({userInfos, playersInfos}) {
                 fetchData();
             }, 5000); // envoi de la requête toutes les 5 secondes pour pas surcharger le serveur
             return () => clearInterval(interval);
+        } else {
+            async function fetchData() {
+                const res = await getAllPlayers(userInfos?.account, userInfos?.guid);
+                if (res.status !== 200) {
+                    console.error('ERROR. Please contact the administrator.');
+                    return;
+                }
+                dispatch(loadPlayers(res.data));
+            }
+            fetchData();
         }
         // eslint-disable-next-line
     }, []);
@@ -196,7 +189,7 @@ function Account({userInfos, playersInfos}) {
                                 name={`${player.name}`}
                                 level={`Niveau: ${player.level}`}
                                 omega={`Oméga: ${player.omega}`}
-                            />
+                                />
                         )
                     })}
                 </div>
@@ -219,14 +212,6 @@ function Account({userInfos, playersInfos}) {
                     <p>Points d'honneur: <span className='txt-yellow'>{modalContent?.honor}</span></p>
                     <p>Points de déshonneur: <span className='txt-yellow'>{modalContent?.deshonor}</span></p>
                     <h3>Artisanat</h3>
-                    {/* <p>Métiers | {modalContent?.jobs !== '' && modalContent?.jobs.split(";").map((job, index) => {
-                        return (
-                            <span key={index}>
-                                {job.split(",")[0] === "2" ? <span className="txt-yellow">Bûcheron:</span> : job.split(",")[0] === "11" ? <span className="txt-yellow">Forgeur d'Epées:</span> : job.split(",")[0] === "13" ? <span className="txt-yellow">Sculpteur d'Arcs:</span> : job.split(",")[0] === "14" ? <span className="txt-yellow">Forgeur de Marteaux:</span> : job.split(",")[0] === "15" ? <span className="txt-yellow">Cordonnier:</span> : job.split(",")[0] === "16" ? <span className="txt-yellow">Bijoutier:</span> : job.split(",")[0] === "17" ? <span className="txt-yellow">Forgeur de Dagues:</span> : job.split(",")[0] === "18" ? <span className="txt-yellow">Sculpteur de Bâtons:</span> : job.split(",")[0] === "19" ? <span className="txt-yellow">Sculpteur de Baguettes:</span> : job.split(",")[0] === "20" ? <span className="txt-yellow">Forgeur de Pelles:</span> : job.split(",")[0] === "24" ? <span className="txt-yellow">Mineur:</span> : job.split(",")[0] === "25" ? <span className="txt-yellow">Boulanger:</span> : job.split(",")[0] === "26" ? <span className="txt-yellow">Alchimiste:</span> : job.split(",")[0] === "27" ? <span className="txt-yellow">Tailleur:</span> : job.split(",")[0] === "28" ? <span className="txt-yellow">Paysan:</span> : job.split(",")[0] === "31" ? <span className="txt-yellow">Forgeur de Haches:</span> : job.split(",")[0] === "36" ? <span className="txt-yellow">Pêcheur:</span> : job.split(",")[0] === "41" ? <span className="txt-yellow">Chasseur:</span> : job.split(",")[0] === "43" ? <span className="txt-yellow">Forgemage de Dagues:</span> : job.split(",")[0] === "44" ? <span className="txt-yellow">Forchemage d'Epées:</span> : job.split(",")[0] === "45" ? <span className="txt-yellow">Forgemage de Marteaux:</span> : job.split(",")[0] === "46" ? <span className="txt-yellow">Forgemage de Pelles:</span> : job.split(",")[0] === "47" ? <span className="txt-yellow">Forgemage de Haches:</span> : job.split(",")[0] === "48" ? <span className="txt-yellow">Sculptomage d'Arcs:</span> : job.split(",")[0] === "49" ? <span className="txt-yellow">Sculptomage de Baguettes:</span> : job.split(",")[0] === "50" ? <span className="txt-yellow">Sculptomage de Bâtons:</span> : job.split(",")[0] === "56" ? <span className="txt-yellow">Boucher:</span> : job.split(",")[0] === "58" ? <span className="txt-yellow">Poissonnier:</span> : job.split(",")[0] === "60" ? <span className="txt-yellow">Forgeur de Boucliers:</span> : job.split(",")[0] === "62" ? <span className="txt-yellow">Cordomage:</span> : job.split(",")[0] === "63" ? <span className="txt-yellow">Joaillomage:</span> : job.split(",")[0] === "64" ? <span className="txt-yellow">Costumage:</span> : job.split(",")[0] === "65" ? <span className="txt-yellow">Bricoleur:</span> : null} {job.split(",")[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " XP |"}
-                                {"\n"}
-                            </span>
-                        )
-                    })}</p> */}
                     <Row>
                         <Col md={8} sm={12} className={modalContent?.jobs === '' ? 'col-no-jobs' : ''}>
                             <Card />

@@ -5,11 +5,12 @@ const playersSlice = createSlice({
     name: "players",
     initialState: {
         listPlayers: [],
+        listSuccess: [],
     },
     reducers: {
         loadPlayers(state, action) {
             state.listPlayers = [...action.payload];
-        }
+        },
     },
 
 });

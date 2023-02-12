@@ -32,11 +32,13 @@ function Login() {
                 return;
             } else if (res.status === 401) {
                 return;
-            } else {
+            } else if (res.status === 200) {
                 localStorage.setItem("auth_token", res.data.token);
                 localStorage.setItem("account", res.data.account);
                 localStorage.setItem("id", res.data.id);
                 navigate(`/account/${res.data.account}/${res.data.id}`);
+            } else {
+                return;
             }
         }
     }
