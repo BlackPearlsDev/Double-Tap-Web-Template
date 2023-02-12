@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Container, Tooltip, Whisper, Modal, Button } from 'rsuite';
+import React, { useEffect, useState } from 'react';
+import { Container, Tooltip, Whisper, Modal, Button, Notification, useToaster } from 'rsuite';
 import CardPlayer from '../../UI/CardPlayer/Index';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -56,9 +56,18 @@ import ImgJobSculpteurBaguettes from '../../../assets/jobs/sculpteur_baguettes.j
 import ImgJobSculpteurBatons from '../../../assets/jobs/sculpteur_batons.jpg';
 import ImgJobTailleur from '../../../assets/jobs/tailleur.jpg';
 
+const Message = React.forwardRef(({ type, ...rest }, ref) => {
+    return (
+      <Notification ref={ref} {...rest} type={"success"} header={"Vote confirmé !"} duration={5000}>
+        <p>Votre vote à bien été prit en compte !</p>
+      </Notification>
+    );
+});
+
 function Account({userInfos, playersInfos}) {
 
     const dispatch = useDispatch();
+    const toaster = useToaster();
     const lastConnection = userInfos?.lastConnectionDate.replace(/[~]/g,'/').substring(0, 10);
 
     const [open, setOpen] = useState(false);
@@ -71,6 +80,44 @@ function Account({userInfos, playersInfos}) {
 
     const handleChange = () => {
       setVisible(!visible);
+    };
+
+    const API_token = '';
+    const API_ip = window.location.hostname;
+    const setData = useState(null)[1];
+    const setLoading = useState(false)[1];
+    const setError = useState(null)[1];
+
+    const [voteOk, setVoteOk] = useState(false);
+
+    const handleCheckVote = () => {
+        window.open('https://serveur-prive.net/dofus/double-tap-la-revolution-des-serveurs-prives-retro-1-39-gladiatrool-13770/vote', '_blank');
+        setLoading(true);
+        fetch(`https://serveur-prive.net/api/vote/json/${API_token}/${API_ip}`)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+            }
+            return response.json();
+        })
+        .then(jsonData => {
+            setData(jsonData);
+            setLoading(false);
+            if (jsonData.status === 1) {
+                setVoteOk(true);
+            } else {
+                setVoteOk(false);
+            }
+        })
+        .catch(error => {
+            setError(error);
+            setLoading(false);
+            console.error("There was a problem with the fetch operation:", error);
+        })
+        .finally(() => {
+            setLoading(false);
+            setVoteOk(false);
+        });
     };
 
     const tooltip = (
@@ -107,8 +154,7 @@ function Account({userInfos, playersInfos}) {
                 }) : <span>Aucun métier</span>}
             </Panel>
         </Whisper>
-      );
-
+    );
     useEffect(() => {
         if (playersInfos?.length !== 0 ) {
             const interval = setInterval(() => {
@@ -173,6 +219,7 @@ function Account({userInfos, playersInfos}) {
                                 {visible ? <EyeIcon /> : <EyeSlashIcon />}
                             </InputGroup.Button>
                         </InputGroup>
+                        <button className='btn-vote' onClick={handleCheckVote}>Voter</button>
                         <Link to="/logout" className='btn-logout'>Déconnexion</Link>
                     </div>
                 </article>
@@ -229,6 +276,9 @@ function Account({userInfos, playersInfos}) {
                 </Modal.Footer>
             </Modal>
 
+            {voteOk && toaster.push(<Message></Message>, {
+                placement: 'topEnd'
+            })}
         </main>
     )
 }

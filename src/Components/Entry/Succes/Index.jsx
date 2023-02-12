@@ -12,7 +12,7 @@ const Message = React.forwardRef(({ type, ...rest }, ref) => {
         <p>Vous pouvez désormais jouer sur le serveur.</p>
       </Notification>
     );
-  });
+});
 
 function Succes() {
 
