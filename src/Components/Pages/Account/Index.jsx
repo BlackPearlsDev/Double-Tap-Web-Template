@@ -82,7 +82,7 @@ function Account({userInfos, playersInfos}) {
       setVisible(!visible);
     };
 
-    const API_token = '';
+    const API_token = 'NOpkQGcBLziyWvd';
     const API_ip = window.location.hostname;
     const setData = useState(null)[1];
     const setLoading = useState(false)[1];

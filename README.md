@@ -1,4 +1,10 @@
-# Double Tap
+<h1 align="center">DOUBLE TAP</h1>
+
+<div align="center">
+
+![Double Tap last commit](https://img.shields.io/github/last-commit/BlackPearlsDev/Double-Tap-Web-Template?style=for-the-badge) ![Double Tap version](https://img.shields.io/github/package-json/v/BlackPearlsDev/Double-Tap-Web-Template?style=for-the-badge) ![Double Tap size](https://img.shields.io/github/repo-size/BlackPearlsDev/Double-Tap-Web-Template?style=for-the-badge) ![Double Tap license](https://img.shields.io/github/license/BlackPearlsDev/Double-Tap-Web-Template?style=for-the-badge)
+
+</div>
 
 Projet en cours de développement.
 

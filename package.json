@@ -1,6 +1,6 @@
 {
   "name": "double-tap",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "homepage": "https://BlackPearlsDev.github.io/Double-Tap-Web-Template",
   "private": true,
   "proxy": "http://localhost:9000",
