@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Double-Tap-Web-Template/static/css/main.c93068df.css",
-    "main.js": "/Double-Tap-Web-Template/static/js/main.f945332f.js",
+    "main.js": "/Double-Tap-Web-Template/static/js/main.d018e5b3.js",
     "static/media/news-1.jpg": "/Double-Tap-Web-Template/static/media/news-1.11439e95ee85543e4bc9.jpg",
     "static/media/img_top_home.png": "/Double-Tap-Web-Template/static/media/img_top_home.a90dfb2ec218e25160bd.png",
     "static/media/news-3.jpg": "/Double-Tap-Web-Template/static/media/news-3.18601e0e52d24c5192ba.jpg",
@@ -30,10 +30,10 @@
     "static/media/cordomage.jpg": "/Double-Tap-Web-Template/static/media/cordomage.e516d1f70f3ed94e9ea9.jpg",
     "index.html": "/Double-Tap-Web-Template/index.html",
     "main.c93068df.css.map": "/Double-Tap-Web-Template/static/css/main.c93068df.css.map",
-    "main.f945332f.js.map": "/Double-Tap-Web-Template/static/js/main.f945332f.js.map"
+    "main.d018e5b3.js.map": "/Double-Tap-Web-Template/static/js/main.d018e5b3.js.map"
   },
   "entrypoints": [
     "static/css/main.c93068df.css",
-    "static/js/main.f945332f.js"
+    "static/js/main.d018e5b3.js"
   ]
 }
